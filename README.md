@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+I am Kira and I am excited because I want to make something
 	
 ## Technologies
 Technologies used for this project:
