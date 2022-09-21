@@ -6,8 +6,8 @@
 
 ## General Info
 This browser based web application to ...
-I am Kira and I am excited because I want to make something
-I am YeEun and I am excited for this project because I make something 
+* I am Kira and I am excited because I want to make something
+* I am Joseph and I am excited because I want to start coding
 	
 ## Technologies
 Technologies used for this project:
