@@ -2,6 +2,7 @@
   padding: 0.75em;
   font-size: 0.8em;
 }
+
 footer {
   bottom: 0;
   height: 3em;
@@ -12,4 +13,24 @@ footer {
 
 #footerborder {
   border-top: 1px solid #ccc;
+}
+
+.home {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#generate {
+  background: linen;
+  border: 1px solid #ccc;
+  border-radius: 3em;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bolder;
+  padding: 1em 1.5em;
+  display: block;
 }
