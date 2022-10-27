@@ -19,9 +19,17 @@ main {
 #activity-title {
   width: 100%;
   margin-top: 1em;
-  padding: 0.25em;
+  padding: 0.75em;
+
   text-align: center;
   border: 1px solid rgb(159, 158, 158);
+  border-radius: 8px;
+  /* background-color: rgb(255, 255, 255); */
+}
+
+#activity-title h2 {
+  margin: 0;
+  padding: 0;
 }
 
 #text {
@@ -33,20 +41,18 @@ main {
   max-width: 500px;
   max-height: 800px;
 
+  border-radius: 8px;
   margin: 0.5em 0.5em 0.5em 0em;
   float: left;
 }
 
-#activity-title h2 {
-  margin: 0;
-  padding: 0;
-}
 #description-tag-box {
   float: right;
   width: calc(100% - 520px);
 
   margin: 0.5em 0em 0.5em 0.5em;
   border: 1px solid rgb(159, 158, 158);
+  border-radius: 8px;
   padding: 0.5em;
 }
 
@@ -60,19 +66,18 @@ main {
   margin: 6px;
 }
 
-#buttons {
-  position: relative;
-  float: right;
+.btn-danger {
+  background-color: rgb(214, 160, 160);
+  color: black;
+  margin-left: 0.8em;
+  border-radius: 8px;
 }
 
 .btn-success {
   background-color: rgb(160, 214, 160);
   color: black;
-}
-
-.btn-danger {
-  background-color: rgb(214, 160, 160);
-  color: black;
+  float: right;
+  border-radius: 8px;
 }
 
 /* Medium Screen */
@@ -84,10 +89,19 @@ main {
   #description-tag-box {
     width: calc(100% - 320px);
   }
+
+  .btn-success,
+  .btn-danger {
+    padding: 6px;
+  }
 }
 
 /* Small Screen */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 692px) {
+  main {
+    max-width: 90vw;
+  }
+
   #activity-image {
     width: 100%;
     clear: both;
@@ -108,7 +122,7 @@ main {
   #description-tag-box > h3 {
     font-size: 1em;
   }
-  #buttons {
-    float: none;
+  .btn-danger {
+    margin-left: 0;
   }
 }
