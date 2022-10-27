@@ -1,17 +1,6 @@
 .home {
-  /* display: table; */
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 0; */
-  /* height: 100%; */
-  /* width: 100%; */
   padding-top: 10em;
 }
-
-/* .home2 {
-  display: table-cell;
-  vertical-align: middle;
-} */
 
 #generate {
   background: linen;
@@ -41,5 +30,21 @@
   display: flex;
   justify-content: space-between;
   padding: 2em;
+  background-color: #eee;
+}
+
+#more-filter {
+  padding: 2em;
+  display: flex !important;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.accordion-button:is(.collapsed) {
   background-color: #ccc;
+}
+
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: #fff;
 }
