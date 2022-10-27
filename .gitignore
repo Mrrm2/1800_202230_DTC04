@@ -2,3 +2,5 @@
 *.logs
 node_modules/
 .vscode/
+firebaseAPI.js
+

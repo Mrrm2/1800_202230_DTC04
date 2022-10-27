@@ -3,6 +3,10 @@
   font-size: 0.8em;
 }
 
+#skipsignup a {
+  color: lightgray;
+}
+
 footer {
   bottom: 0;
   height: 3em;
