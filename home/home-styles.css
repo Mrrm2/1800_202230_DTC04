@@ -1,9 +1,9 @@
-.home {
+#home {
   padding-top: 10em;
 }
 
 #generate {
-  background: linen;
+  background: rgb(159, 180, 184);
   border: 1px solid #ccc;
   border-radius: 3em;
   color: #000;
