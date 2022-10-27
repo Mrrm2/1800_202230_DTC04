@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My BCIT Project</title>
+    <title>Activity Generator</title>
     <meta name="comp1800 template" content="My 1800 App" />
 
     <!-- Required meta tags -->
@@ -57,10 +57,18 @@
             doloremque deleniti?
           </p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+            <button
+              onclick="redirect()"
+              type="button"
+              class="btn btn-primary btn-lg px-4 gap-3"
+            >
               Login
             </button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+            <button
+              onclick="redirect()"
+              type="button"
+              class="btn btn-outline-secondary btn-lg px-4"
+            >
               Sign up
             </button>
           </div>
@@ -81,5 +89,6 @@
 
     <!-- Link to scripts of your own -->
     <script src="/scripts/skeleton.js"></script>
+    <script src="/scripts/signin-redirect.js"></script>
   </body>
 </html>
