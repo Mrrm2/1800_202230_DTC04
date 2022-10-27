@@ -24,7 +24,7 @@ main {
   text-align: center;
   border: 1px solid rgb(159, 158, 158);
   border-radius: 8px;
-  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(252, 247, 247);
 }
 
 #activity-title h2 {
@@ -54,14 +54,14 @@ main {
   border: 1px solid rgb(159, 158, 158);
   border-radius: 8px;
   padding: 0.5em;
+
+  background-color: aliceblue;
 }
 
 #tags {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-
-  clear: both;
 }
 
 #tags > span {
@@ -108,7 +108,7 @@ main {
     width: 100%;
     clear: both;
     display: block;
-    margin: 0.5em auto;
+    margin: 0.5em auto 0 auto;
 
     object-fit: cover;
     max-width: 90vw;
