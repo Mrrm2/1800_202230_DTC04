@@ -1,16 +1,17 @@
 .home {
-  display: table;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  /* display: table; */
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
+  /* height: 100%; */
+  /* width: 100%; */
+  padding-top: 10em;
 }
 
-.home2 {
+/* .home2 {
   display: table-cell;
   vertical-align: middle;
-}
+} */
 
 #generate {
   background: linen;
@@ -25,13 +26,20 @@
   margin-right: auto;
 }
 
-#filter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-}
-
 #generate:active {
   border: 1px solid rgb(138, 138, 138);
+}
+
+#filters {
+  border: 1px solid #ccc;
+  margin: auto;
+  margin-top: 3em;
+  width: 620px;
+}
+
+#main-filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  background-color: #ccc;
 }

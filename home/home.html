@@ -38,10 +38,75 @@
     <main>
       <!-------------- Content ---------------->
       <div class="home">
-        <div class="home2">
-          <button id="generate">Generate!</button>
-          <button id="filter">Filter Options</button>
+        <!-- <div class="home2"> -->
+        <button id="generate">Generate!</button>
+        <!-- <button id="filter">Filter Options</button> -->
+        <div id="filters">
+          <div id="main-filter">
+            <div id="cost">
+              Cost
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">$</a>
+                  <a class="dropdown-item" href="#">$$</a>
+                  <a class="dropdown-item" href="#">$$$</a>
+                </div>
+              </div>
+            </div>
+            <div id="time">
+              Time
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1-2H</a>
+                  <a class="dropdown-item" href="#">3-5H</a>
+                  <a class="dropdown-item" href="#">6-10H</a>
+                </div>
+              </div>
+            </div>
+            <div id="proximity">
+              Proximity
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Short</a>
+                  <a class="dropdown-item" href="#">Medium</a>
+                  <a class="dropdown-item" href="#">Long</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="more-filter">More</div>
         </div>
+        <!-- </div> -->
       </div>
     </main>
     <!------------- FOOTER ------------------>
