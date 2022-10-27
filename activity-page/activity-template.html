@@ -32,23 +32,23 @@
     <link rel="stylesheet" href="activity-style.css" />
   </head>
   <body>
-    <main>
-      <!-------------- Nav Bar ---------------->
-      <nav id="navbarPlaceholder"></nav>
+    <!-------------- Nav Bar ---------------->
+    <nav id="navbarPlaceholder"></nav>
 
+    <main>
       <!-------------- Content ---------------->
-      <div class="activity-title">
+      <div id="activity-title">
         <h2>Activity</h2>
       </div>
-      <div class="text">
+      <div id="text">
         <img
           src="https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
           alt=""
-          class="activity-image crop"
+          id="activity-image"
         />
-        <section class="description-tag-box">
+        <section id="description-tag-box">
           <h3>Description</h3>
-          <div class="description">
+          <div id="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
             quas sint sapiente error laboriosam amet obcaecati esse, vel
             cupiditate at harum dolores cumque! Inventore eos debitis cumque
@@ -56,7 +56,7 @@
           </div>
           <hr style="border-top: dotted 1px" />
           <h3>Tags</h3>
-          <div class="tags">
+          <div id="tags">
             <span class="badge bg-secondary">Primary</span>
             <span class="badge bg-secondary">Secondary</span>
             <span class="badge bg-secondary">Success</span>
@@ -67,6 +67,14 @@
             <span class="badge bg-secondary">Dark</span>
           </div>
         </section>
+        <div id="buttons">
+          <button type="button" class="btn btn-danger" id="skip">
+            Skip activity
+          </button>
+          <button type="button" class="btn btn-success" id="favourite">
+            Add to favourite
+          </button>
+        </div>
       </div>
     </main>
     <!------------- FOOTER ------------------>

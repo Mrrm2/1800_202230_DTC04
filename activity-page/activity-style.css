@@ -1,58 +1,114 @@
-.activity-title {
-  font-weight: bold;
-  margin: 1em;
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 4em;
+}
+
+#footerPlaceHolder {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+#activity-title {
+  width: 100%;
+  margin-top: 1em;
   padding: 0.25em;
   text-align: center;
   border: 1px solid rgb(159, 158, 158);
 }
 
-.text {
+#text {
   overflow: auto;
 }
 
-.activity-image {
-  margin: 0.5em 0.5em 0.5em 1em;
+#activity-image {
+  object-fit: cover;
+  max-width: 500px;
+  max-height: 800px;
+
+  margin: 0.5em 0.5em 0.5em 0em;
   float: left;
 }
 
-.crop {
-  object-fit: cover;
-  max-width: 340px;
-  max-height: 500px;
-}
-.activity-title h2 {
+#activity-title h2 {
   margin: 0;
   padding: 0;
 }
-.description-tag-box {
+#description-tag-box {
   float: right;
-  max-width: calc(100vw - 400px);
-  margin: 0.5em 1em 0.5em 0.5em;
+  width: calc(100% - 520px);
+
+  margin: 0.5em 0em 0.5em 0.5em;
   border: 1px solid rgb(159, 158, 158);
   padding: 0.5em;
 }
 
-.tags {
+#tags {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.tags > span {
+
+#tags > span {
   margin: 6px;
 }
 
-@media screen and (max-width: 730px) {
-  .activity-title {
-    margin: 1em calc(100vw-5vw) 1em calc(100vw-5vw);
+#buttons {
+  position: relative;
+  float: right;
+}
+
+.btn-success {
+  background-color: rgb(160, 214, 160);
+  color: black;
+}
+
+.btn-danger {
+  background-color: rgb(214, 160, 160);
+  color: black;
+}
+
+/* Medium Screen */
+@media screen and (max-width: 1100px) {
+  #activity-image {
+    max-width: 300px;
   }
 
-  .activity-image {
-    width: 100%;
-    float: none;
-    clear: both;
+  #description-tag-box {
+    width: calc(100% - 320px);
   }
-  .crop {
+}
+
+/* Small Screen */
+@media screen and (max-width: 650px) {
+  #activity-image {
+    width: 100%;
+    clear: both;
+    display: block;
+    margin: 0.5em auto;
+
     object-fit: cover;
     max-width: 90vw;
+  }
+
+  #description-tag-box {
+    width: 100%;
+    clear: both;
+    display: block;
+    margin: 0.5em auto;
+  }
+
+  #description-tag-box > h3 {
+    font-size: 1em;
+  }
+  #buttons {
+    float: none;
   }
 }
