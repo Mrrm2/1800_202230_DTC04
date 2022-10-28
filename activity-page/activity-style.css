@@ -80,6 +80,12 @@ main {
   color: black;
   float: right;
   border-radius: 8px;
+  margin-right: 1px;
+}
+
+.btn-danger:focus,
+.btn-success:focus {
+  box-shadow: none;
 }
 
 /* Medium Screen */
