@@ -1,9 +1,9 @@
-#home {
-  padding-top: 10em;
+.home {
+  margin-top: 20em;
 }
 
 #generate {
-  background: rgb(159, 180, 184);
+  background: rgb(173, 189, 192);
   border: 1px solid #ccc;
   border-radius: 3em;
   color: #000;
