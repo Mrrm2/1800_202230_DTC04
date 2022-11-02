@@ -1,195 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Activity</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activity</title>
 
-    <!-- Bootstrap Library JS CDN  go here -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-    <!-- jQuery CDN go here -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap Library JS CDN  go here -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-    <!-- Link Style Sheets -->
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="home-styles.css" />
-  </head>
-  <body>
-    <!-------------- Nav Bar ---------------->
-    <nav id="navbarPlaceholder"></nav>
+  <!-- jQuery CDN go here -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <main>
-      <!-------------- Content ---------------->
-      <div id="home">
-        <button id="generate">Generate!</button>
-        <div id="filters">
-          <div id="main-filter">
-            <div id="cost">
-              Cost
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown button
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">$</a>
-                  <a class="dropdown-item" href="#">$$</a>
-                  <a class="dropdown-item" href="#">$$$</a>
-                </div>
-              </div>
-            </div>
-            <div id="time">
-              Time
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown button
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">1-2H</a>
-                  <a class="dropdown-item" href="#">3-5H</a>
-                  <a class="dropdown-item" href="#">6-10H</a>
-                </div>
-              </div>
-            </div>
-            <div id="proximity">
-              Proximity
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown button
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Short</a>
-                  <a class="dropdown-item" href="#">Medium</a>
-                  <a class="dropdown-item" href="#">Long</a>
-                </div>
+  <!-- Link Style Sheets -->
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="home-styles.css" />
+</head>
+
+<body>
+  <!-------------- Nav Bar ---------------->
+  <nav id="navbarPlaceholder"></nav>
+
+  <main>
+    <!-------------- Content ---------------->
+    <div id="home">
+      <button id="generate">Generate!</button>
+      <div id="filters">
+        <div id="main-filter">
+          <div class="filter" ;id="cost">
+            Cost
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">$</a>
+                <a class="dropdown-item" href="#">$$</a>
+                <a class="dropdown-item" href="#">$$$</a>
               </div>
             </div>
           </div>
-          <div class="accordion" id="accordianExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="more-filter-button">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  <b>More Filters</b>
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body" id="more-filter">
-                  <div id="group">
-                    Group
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Dropdown button
-                      </button>
-                      <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <a class="dropdown-item" href="#">$</a>
-                        <a class="dropdown-item" href="#">$$</a>
-                        <a class="dropdown-item" href="#">$$$</a>
-                      </div>
+          <div class="filter" ;id="time">
+            Time
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">1-2H</a>
+                <a class="dropdown-item" href="#">3-5H</a>
+                <a class="dropdown-item" href="#">6-10H</a>
+              </div>
+            </div>
+          </div>
+          <div class="filter" ;id="proximity">
+            Proximity
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Short</a>
+                <a class="dropdown-item" href="#">Medium</a>
+                <a class="dropdown-item" href="#">Long</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion" id="accordianExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="more-filter-button">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <b>More Filters</b>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body" id="more-filter">
+                <div class="filter" ;id="group">
+                  Group
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">$</a>
+                      <a class="dropdown-item" href="#">$$</a>
+                      <a class="dropdown-item" href="#">$$$</a>
                     </div>
                   </div>
-                  <div id="energy">
-                    Energy
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Dropdown button
-                      </button>
-                      <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <a class="dropdown-item" href="#">1-2H</a>
-                        <a class="dropdown-item" href="#">3-5H</a>
-                        <a class="dropdown-item" href="#">6-10H</a>
-                      </div>
+                </div>
+                <div class="filter" ;id="energy">
+                  Energy
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">1-2H</a>
+                      <a class="dropdown-item" href="#">3-5H</a>
+                      <a class="dropdown-item" href="#">6-10H</a>
                     </div>
                   </div>
-                  <div id="inout">
-                    In / Out
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Dropdown button
-                      </button>
-                      <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <a class="dropdown-item" href="#">Short</a>
-                        <a class="dropdown-item" href="#">Medium</a>
-                        <a class="dropdown-item" href="#">Long</a>
-                      </div>
+                </div>
+                <div class="filter" ;id="inout">
+                  In / Out
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Short</a>
+                      <a class="dropdown-item" href="#">Medium</a>
+                      <a class="dropdown-item" href="#">Long</a>
                     </div>
                   </div>
                 </div>
@@ -198,12 +135,14 @@
           </div>
         </div>
       </div>
-    </main>
-    <!------------- FOOTER ------------------>
-    <nav id="footerPlaceholder"></nav>
+    </div>
+  </main>
+  <!------------- FOOTER ------------------>
+  <nav id="footerPlaceholder"></nav>
 
-    <!----- Link to scripts of your own ------>
-    <!------- Load Navbar and Footer --------->
-    <script src="/scripts/skeleton.js"></script>
-  </body>
+  <!----- Link to scripts of your own ------>
+  <!------- Load Navbar and Footer --------->
+  <script src="/scripts/skeleton.js"></script>
+</body>
+
 </html>

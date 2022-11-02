@@ -67,11 +67,13 @@
     display: block;
   }
 
-  .accordion-button {
+  #more-filter {
     display: block;
+    overflow: hidden;
   }
 
-  .accordion-button:not(.collapsed) {
-    display: block;
+  .filter {
+    padding-bottom: 1em;
   }
+
 }
