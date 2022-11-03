@@ -1,9 +1,9 @@
-#home {
-  padding-top: 10em;
+.home {
+  margin-top: 20em;
 }
 
 #generate {
-  background: rgb(159, 180, 184);
+  background: rgb(173, 189, 192);
   border: 1px solid #ccc;
   border-radius: 3em;
   color: #000;
@@ -13,6 +13,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2em;
 }
 
 #generate:active {
@@ -55,4 +56,23 @@
 
 .accordion-button:after {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+@media screen and (max-width: 692px) {
+  #filters {
+    width: 80%;
+  }
+
+  #main-filter {
+    display: block;
+  }
+
+  #more-filter {
+    display: block;
+    overflow: hidden;
+  }
+
+  .filter {
+    padding-bottom: 1em;
+  }
 }
