@@ -1,0 +1,22 @@
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.welcomeBanner {
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  padding: 0.5em;
+  margin: 1em auto;
+  text-align: center;
+}
+
+#settings-sidebar {
+  overflow: auto;
+  float: left;
+}
+
+#settings-body {
+  float: right;
+  width: calc(100% - 220px);
+}

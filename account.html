@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>***replace this***</title>
+    <title>Account</title>
 
     <!------------------------------------------>
     <!-- Bootstrap Library CSS JS CDN go here -->
@@ -43,7 +43,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="#####" />
+    <link rel="stylesheet" href="/styles/account.css" />
   </head>
   <body>
     <!-------------- Nav Bar ---------------->
@@ -51,6 +51,40 @@
 
     <main>
       <!-------------- Content ---------------->
+      <h1 class="welcomeBanner">Welcome, <span id="insertName"></span></h1>
+      <div
+        id="settings-sidebar"
+        class="d-flex flex-column flex-shrink-0 p-3 bg-light"
+        style="width: 200px"
+      >
+        <a
+          href="/home/home.html"
+          class="d-flex align-items-left mb-md-0 me-md-auto link-dark text-decoration-none"
+        >
+          <span class="fs-4">Home</span>
+        </a>
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li>
+            <button id="profile-pic" class="nav-link link-dark">
+              Profile Picture
+            </button>
+          </li>
+          <li>
+            <button id="name" class="nav-link link-dark">Name</button>
+          </li>
+
+          <li>
+            <button id="sign-out" class="nav-link link-dark">Sign Out</button>
+          </li>
+        </ul>
+      </div>
+      <div id="settings-body">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo aut
+        accusamus deleniti aliquam facilis totam debitis accusantium quae nulla
+        sint. Hic voluptatibus omnis neque ratione quaerat rem id assumenda
+        sint.
+      </div>
     </main>
 
     <!------------- FOOTER ------------------>
@@ -60,5 +94,6 @@
     <!------- Load Navbar and Footer --------->
     <script src="/scripts/skeleton.js"></script>
     <script src="/scripts/firebaseAPI.js"></script>
+    <script src="/scripts/account.js"></script>
   </body>
 </html>
