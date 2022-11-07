@@ -14,10 +14,16 @@ signOut = function signOut() {
 
 firebase.auth().onAuthStateChanged(function (user) {
   const element = document.getElementById("sign-in-or-out");
+  const favorites = document.getElementById("favorites");
   if (user) {
     element.innerHTML = "Sign Out";
     element.onclick = signOut;
   } else {
+    favorites.href = "#";
+    favorites.onclick = function () {
+      alert("You must be signed in to view your favorites!");
+      window.location.href = "/signin.html";
+    };
     element.innerHTML = "Sign In";
     element.onclick = function () {
       window.location.href = "/signin.html";
