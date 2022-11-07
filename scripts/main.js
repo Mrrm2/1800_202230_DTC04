@@ -1,4 +1,4 @@
-// logout firstore
+// logout firestore
 signOut = function signOut() {
   firebase
     .auth()
