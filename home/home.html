@@ -56,60 +56,60 @@
         <button id="generate">Generate!</button>
         <div id="filters">
           <div id="main-filter">
-            <div class="filter" ;id="cost">
+            <div class="filter" id="cost">
               Cost
               <div class="dropdown">
                 <button
-                  class="btn btn-secondary dropdown-toggle"
+                  class="btn btn-secondary dropdown-toggle is-flex"
                   type="button"
-                  id="dropdownMenuButton"
+                  id="costDropdown"
                   data-bs-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   ----- None -----
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu" aria-labelledby="costDropdown">
                   <a class="dropdown-item" href="#">$</a>
                   <a class="dropdown-item" href="#">$$</a>
                   <a class="dropdown-item" href="#">$$$</a>
                 </div>
               </div>
             </div>
-            <div class="filter" ;id="time">
+            <div class="filter" id="time">
               Time
               <div class="dropdown">
                 <button
-                  class="btn btn-secondary dropdown-toggle"
+                  class="btn btn-secondary dropdown-toggle is-flex"
                   type="button"
-                  id="dropdownMenuButton"
+                  id="timeDropdown"
                   data-bs-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   ----- None -----
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu" aria-labelledby="timeDropdown">
                   <a class="dropdown-item" href="#">1-2H</a>
                   <a class="dropdown-item" href="#">3-5H</a>
                   <a class="dropdown-item" href="#">6-10H</a>
                 </div>
               </div>
             </div>
-            <div class="filter" ;id="proximity">
+            <div class="filter" id="proximity">
               Proximity
               <div class="dropdown">
                 <button
-                  class="btn btn-secondary dropdown-toggle"
+                  class="btn btn-secondary dropdown-toggle is-flex"
                   type="button"
-                  id="dropdownMenuButton"
+                  id="proximityDropdown"
                   data-bs-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   ----- None -----
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu" aria-labelledby="proximityDropdown">
                   <a class="dropdown-item" href="#">Short</a>
                   <a class="dropdown-item" href="#">Medium</a>
                   <a class="dropdown-item" href="#">Long</a>
@@ -117,7 +117,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion" id="accordianExample">
+          <div class="accordion" id="more-filter-dropdown">
             <div class="accordion-item">
               <h2 class="accordion-header" id="more-filter-button">
                 <button
@@ -135,16 +135,16 @@
                 id="collapseOne"
                 class="accordion-collapse collapse"
                 aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#more-filter-dropdown"
               >
                 <div class="accordion-body" id="more-filter">
-                  <div class="filter" ;id="group">
+                  <div class="filter" id="group">
                     Group
                     <div class="dropdown">
                       <button
-                        class="btn btn-secondary dropdown-toggle"
+                        class="btn btn-secondary dropdown-toggle is-flex"
                         type="button"
-                        id="dropdownMenuButton"
+                        id="groupDropdown"
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
@@ -153,7 +153,7 @@
                       </button>
                       <div
                         class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton"
+                        aria-labelledby="groupDropdown"
                       >
                         <a class="dropdown-item" href="#">Friends</a>
                         <a class="dropdown-item" href="#">Significant Other</a>
@@ -161,13 +161,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="filter" ;id="energy">
+                  <div class="filter" id="energy">
                     Energy
                     <div class="dropdown">
                       <button
-                        class="btn btn-secondary dropdown-toggle"
+                        class="btn btn-secondary dropdown-toggle is-flex"
                         type="button"
-                        id="dropdownMenuButton"
+                        id="energyDropdown"
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
@@ -176,7 +176,7 @@
                       </button>
                       <div
                         class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton"
+                        aria-labelledby="energyDropdown"
                       >
                         <a class="dropdown-item" href="#">Low</a>
                         <a class="dropdown-item" href="#">Medium</a>
@@ -184,13 +184,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="filter" ;id="inout">
+                  <div class="filter" id="inout">
                     In / Out
                     <div class="dropdown">
                       <button
-                        class="btn btn-secondary dropdown-toggle"
+                        class="btn btn-secondary dropdown-toggle is-flex"
                         type="button"
-                        id="dropdownMenuButton"
+                        id="inoutDropdown"
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
@@ -199,7 +199,7 @@
                       </button>
                       <div
                         class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton"
+                        aria-labelledby="inoutDropdown"
                       >
                         <a class="dropdown-item" href="#">Indoor</a>
                         <a class="dropdown-item" href="#">Outdoor</a>
@@ -221,5 +221,6 @@
     <script src="/scripts/skeleton.js"></script>
     <script src="/scripts/firebaseAPI.js"></script>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/home.js"></script>
   </body>
 </html>

@@ -41,6 +41,16 @@
   justify-content: space-between;
 }
 
+.dropdown > button {
+  width: 160px;
+}
+
+.is-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .accordion-button:is(.collapsed) {
   background-color: #ccc;
 }
