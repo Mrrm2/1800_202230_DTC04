@@ -1,10 +1,26 @@
+// logout firstore
+signOut = function signOut() {
+  firebase
+    .auth()
+    .signOut()
+    .then(() => {
+      // Sign-out successful.
+      window.location.href = "/index.html";
+    })
+    .catch((error) => {
+      // An error happened.
+    });
+};
+
 firebase.auth().onAuthStateChanged(function (user) {
-  const element = document.getElementById("nav1");
+  const element = document.getElementById("sign-in-or-out");
   if (user) {
-    element.innerHTML = "My Account";
-    element.href = "/account.html";
+    element.innerHTML = "Sign Out";
+    element.onclick = signOut;
   } else {
     element.innerHTML = "Sign In";
-    element.href = "/signin.html";
+    element.onclick = function () {
+      window.location.href = "/signin.html";
+    };
   }
 });
