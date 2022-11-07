@@ -21,8 +21,9 @@ firebase.auth().onAuthStateChanged(function (user) {
   } else {
     favorites.href = "#";
     favorites.onclick = function () {
-      alert("You must be signed in to view your favorites!");
-      window.location.href = "/signin.html";
+      if (confirm("Please sign in to view your favorites!")) {
+        window.location.href = "/signin.html";
+      }
     };
     element.innerHTML = "Sign In";
     element.onclick = function () {
