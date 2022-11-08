@@ -38,3 +38,30 @@ function readActivity() {
     });
 }
 readActivity(); //calling the function
+
+function addToFavourites() {
+  console.log("add to favourites");
+  // get userid from firebase
+  firebase.auth().onAuthStateChanged((user) => {
+    // Check if a user is signed in:
+    if (user) {
+      user_ID = user.uid;
+      // add to favourites in firebase
+      db.collection("users")
+        .doc(user_ID)
+        .update({
+          favourites: firebase.firestore.FieldValue.arrayUnion(
+            //
+            // need to change activity id to a variable
+            // need to update this to the variable
+            //
+            "B8Cg3zNu1H8G7H3BRPxK"
+          ),
+        });
+    } else {
+      if (confirm("Please sign in to add to your favorites!")) {
+        window.location.href = "/signin.html";
+      }
+    }
+  });
+}
