@@ -1,108 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Activity</title>
 
-    <!------------------------------------------>
-    <!-- Bootstrap Library CSS JS CDN go here -->
-    <!------------------------------------------>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activity</title>
 
-    <!-------------------------------------------------------->
-    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-    <!-------------------------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
-    />
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-    <!-------------------------------------------->
-    <!-- Other libraries and styles of your own -->
-    <!-------------------------------------------->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="activity-style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-  </head>
-  <body>
-    <!-------------- Nav Bar ---------------->
-    <nav id="navbarPlaceholder"></nav>
 
-    <main>
-      <!-------------- Content ---------------->
-      <div id="activity-title">
-        <h2>Activity</h2>
-      </div>
-      <div id="text">
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <!-------------------------------------------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="activity-style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <!-------------- Nav Bar ---------------->
+  <nav id="navbarPlaceholder"></nav>
+
+  <main>
+    <!-------------- Content ---------------->
+    <div id="activity-title">
+      <h2>Activity</h2>
+    </div>
+    <div id="text">
+      <!-- <div id="imgContainer"> -->
         <img
-          src="https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
-          alt=""
-          id="activity-image"
-        />
-        <aside>
-          <section id="description-tag-box">
-            <h3>Description</h3>
-            <div id="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              quas sint sapiente error laboriosam amet obcaecati esse, vel
-              cupiditate at harum dolores cumque! Inventore eos debitis cumque
-              distinctio laborum. Impedit?
-            </div>
-            <hr style="border-top: dotted 1px" />
-            <h3>Tags</h3>
-            <div id="tags">
-              <span class="badge bg-secondary">Primary</span>
-              <span class="badge bg-secondary">Secondary</span>
-              <span class="badge bg-secondary">Success</span>
-              <span class="badge bg-secondary">Danger</span>
-              <span class="badge bg-secondary">Warning</span>
-              <span class="badge bg-secondary">Info</span>
-              <span class="badge bg-secondary">Light</span>
-              <span class="badge bg-secondary">Dark</span>
-            </div>
-          </section>
+        src="https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+        alt="" id="activity-image" />
+      <!-- </div> -->
+      
+      <aside>
+        <section id="description-tag-box">
+          <h3 id="nameGoesHere">Description</h3>
+          <div id="description">
+            <!-- description goes here -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quam facere quaerat placeat earum ducimus
+            dolorum recusandae veritatis, tempore veniam consequuntur et obcaecati est eos ad, iure aliquam eligendi!
+            Voluptate?
+          </div>
 
-          <button type="button" class="btn btn-danger" id="skip">
-            <i class="bi bi-x-lg"></i> Skip Activity
-          </button>
-          <button type="button" class="btn btn-success" id="favourite">
-            Favourite <i class="bi bi-star"></i>
-          </button>
-        </aside>
-      </div>
-    </main>
-    <!------------- FOOTER ------------------>
-    <nav id="footerPlaceholder"></nav>
+          <hr style="border-top: dotted 1px" />
+          <h3>Tags</h3>
+          <div id="tags">
+            <div class="eachTag">
+              Time: <br>
+              <span class="badge bg-secondary" id="timeGoesHere">Primary</span>
+            </div>
+            <div class="eachTag">
+              Inout: <br>
+              <span class="badge bg-secondary" id="inoutGoesHere">Secondary</span>
+            </div>
+            <div class="eachTag">
+              Energy: <br>
+              <span class="badge bg-secondary" id="energyGoesHere">Success</span>
+            </div>
+            <div class="eachTag">
+              Cost: <br>
+              <span class="badge bg-secondary" id="costGoesHere">Danger</span>
+            </div>
+            <div class="eachTag">
+              Group: <br>
+              <span class="badge bg-secondary" id="groupGoesHere">Warning</span>
+            </div>
+            <div class="eachTag">
+              Proximity: <br>
+              <span class="badge bg-secondary" id="proximityGoesHere">Info</span>
+            </div>
+        
+          </div>
+        </section>
 
-    <!----- Link to scripts of your own ------>
-    <!------- Load Navbar and Footer --------->
-    <script src="/scripts/skeleton.js"></script>
-    <script src="/scripts/firebaseAPI.js"></script>
-    <script src="/scripts/main.js"></script>
-  </body>
+        <button type="button" class="btn btn-danger" id="skip">
+          <i class="bi bi-x-lg"></i> Skip Activity
+        </button>
+        <button type="button" class="btn btn-success" id="favourite">
+          Favourite <i class="bi bi-star"></i>
+        </button>
+      </aside>
+    </div>
+  </main>
+  <!------------- FOOTER ------------------>
+  <nav id="footerPlaceholder"></nav>
+
+  <!----- Link to scripts of your own ------>
+  <!------- Load Navbar and Footer --------->
+  <script src="/scripts/skeleton.js"></script>
+  <script src="/scripts/firebaseAPI.js"></script>
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/displayActivity.js"></script> <!-- Remember!!!!!!! put JS with "db" after firebaseAPI.js -->
+
+
+</body>
+
 </html>
