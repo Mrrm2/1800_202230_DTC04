@@ -37,13 +37,14 @@ main {
   border-radius: 8px;
   margin: 0.5em 0.5em 0.5em 0em;
   float: left;
-  
+}
+
+aside {
+  float: right;
+  width: calc(100% - 520px);
 }
 
 #description-tag-box {
-  float: right;
-  width: calc(100% - 520px);
-
   margin: 0.5em 0em 0.5em 0.5em;
   border: 1px solid rgb(159, 158, 158);
   border-radius: 8px;
@@ -83,18 +84,16 @@ main {
 }
 
 /* The part YeEun modified: Erase it if not wanted */
-.eachTag{
+.eachTag {
   text-align: center;
   float: left;
   width: 33%;
 }
 
-#description-tag-box{
+#description-tag-box {
   padding: 20px;
 }
 /* The part YeEun modified: Erase it if not wanted  */
-
-
 
 /* Medium Screen */
 @media screen and (max-width: 1100px) {
@@ -102,7 +101,7 @@ main {
     max-width: 300px;
   }
 
-  #description-tag-box {
+  aside {
     width: calc(100% - 320px);
   }
 
@@ -128,7 +127,7 @@ main {
     max-width: 90vw;
   }
 
-  #description-tag-box {
+  aside {
     width: 100%;
     clear: both;
     display: block;
