@@ -29,6 +29,7 @@ for (let input of listOfInput) {
 
 $("#generate").click(function () {
   localStorage.setItem("filtersForGenerate", JSON.stringify(userFilters));
+  window.location.href = "/activity-page/activity-template.html";
 
   // add these to activity generation page
   // console.log(JSON.parse(localStorage.getItem("filtersForGenerate")));
