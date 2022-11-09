@@ -52,31 +52,44 @@
     <main>
       <!-------------- Content ---------------->
       <h1>Contact US</h1>
-      <p>Do you have any questions? Please do not hesitate to contact us directly. </p>
-      
+      <p>
+        Do you have any questions? Please do not hesitate to contact us
+        directly.
+      </p>
+
       <form class="row g-3">
         <div class="col-md-6">
           <label for="inputFirstName" class="form-label">First Name</label>
-          <input type="text" class="form-control" id="inputFirstName" >
+          <input type="text" class="form-control" id="inputFirstName" />
         </div>
         <div class="col-md-6">
           <label for="inputLastName" class="form-label">Last Name</label>
-          <input type="text" class="form-control" id="inputLastName" >
-
+          <input type="text" class="form-control" id="inputLastName" />
         </div>
         <div class="col-12">
-          <label for="inputEmail4" class="form-label" >Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="youremail@email.com">       
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail4"
+            placeholder="youremail@email.com"
+          />
         </div>
-       
+
         <div class="col-12">
           <label for="floatingTextarea2">Comments</label>
-          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+            style="height: 100px"
+          ></textarea>
         </div>
-        
-        </div>
+
         <div class="col-12">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" onclick="contactUs()">
+            Submit
+          </button>
         </div>
       </form>
     </main>
@@ -89,5 +102,6 @@
     <script src="/scripts/skeleton.js"></script>
     <script src="/scripts/firebaseAPI.js"></script>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/contactus.js"></script>
   </body>
 </html>
