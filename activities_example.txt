@@ -1,0 +1,7 @@
+ActivityName;Description;Cost;Time;Proximity;Group;Energy;In / Out;Picture
+Rock Climbing;Go rockclimbing;$$;1-2H;Medium;Friends;High;Indoor;https://images.pexels.com/photos/7590931/pexels-photo-7590931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+Spike Ball;Grab a spikeball set and go to a park for a fun time with friends!;$;1-2H;Close;Friends;High;Outdoor;https://cdn.shopify.com/s/files/1/0152/1325/products/2190752c3477c13977e0788299c3ee55_grande.png
+Paint and Sip;Grab a wine glass, put on a Bob Ross video, and start painting!;$;3-5H;Close;Friends;Low;Indoor;https://cdn.britannica.com/03/193803-050-CBC590FA/Bob-Ross.jpg
+Puzzle Night;Grab a drink, turn on some music, and assemble a puzzle together!;$;3-5H;Close;Friends;Low;Indoor;https://moneylifewax.com/wp-content/uploads/2019/06/puzzle-night.png
+Jackbox;Jackbox is a series of party video games where your phone is the controller and up to 8 people can play. It's available on multiple platforms (PS4, PS3, Nintendo Switch, Windows, MacOS, and many more)! There are drawing games, trivias, writing game, etc. Get ready for a load of fun and laughters XD;$$;1-2H;Close;Friends;Medium;Indoor;https://www.greenmangaming.com/blog/wp-content/uploads/2020/06/Jackbox-Feature-890x606.jpg
+Picnic;Everyone bring something to eat and drink!;$;3-5H;Medium;Friends;Medium;Outdoor;https://images.pexels.com/photos/745045/pexels-photo-745045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
