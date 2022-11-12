@@ -81,11 +81,7 @@
 
           <div class="col-12">
             <label for="formGroupExampleInput">Activity Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="formGroupExampleInput"
-            />
+            <input type="text" class="form-control" id="activityName" />
           </div>
 
           <div class="col-12">
@@ -93,7 +89,7 @@
             <textarea
               class="form-control"
               placeholder="Description of your activity"
-              id="floatingTextarea2"
+              id="description"
               style="height: 100px"
             ></textarea>
           </div>
@@ -106,35 +102,39 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox1"
-                    value="option1"
+                    type="radio"
+                    name="cost"
+                    value="any"
+                    checked
                   />
-                  <label class="form-check-label" for="inlineCheckbox1"
-                    >$</label
-                  >
+                  <label class="form-check-label"> Any </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox2"
-                    value="option2"
+                    type="radio"
+                    name="cost"
+                    value="$"
                   />
-                  <label class="form-check-label" for="inlineCheckbox2"
-                    >$$</label
-                  >
+                  <label class="form-check-label"> $ </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox3"
-                    value="option3"
+                    type="radio"
+                    name="cost"
+                    value="$$"
                   />
-                  <label class="form-check-label" for="inlineCheckbox3"
-                    >$$$</label
-                  >
+                  <label class="form-check-label"> $$ </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="cost"
+                    value="$$$"
+                  />
+                  <label class="form-check-label"> $$$ </label>
                 </div>
               </div>
 
@@ -143,35 +143,39 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox1"
-                    value="option1"
+                    type="radio"
+                    name="time"
+                    value="any"
+                    checked
                   />
-                  <label class="form-check-label" for="inlineCheckbox1"
-                    >1-2H</label
-                  >
+                  <label class="form-check-label"> Any </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox2"
-                    value="option2"
+                    type="radio"
+                    name="time"
+                    value="1-2H"
                   />
-                  <label class="form-check-label" for="inlineCheckbox2"
-                    >3-5H</label
-                  >
+                  <label class="form-check-label"> 1-2H </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox3"
-                    value="option3"
+                    type="radio"
+                    name="time"
+                    value="3-5H"
                   />
-                  <label class="form-check-label" for="inlineCheckbox3"
-                    >6-10H</label
-                  >
+                  <label class="form-check-label"> 3-5H </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="time"
+                    value="6-10H"
+                  />
+                  <label class="form-check-label"> 6-10H </label>
                 </div>
               </div>
 
@@ -180,35 +184,39 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox1"
-                    value="option1"
+                    type="radio"
+                    name="proximity"
+                    value="any"
+                    checked
                   />
-                  <label class="form-check-label" for="inlineCheckbox1"
-                    >Short</label
-                  >
+                  <label class="form-check-label"> Any </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox2"
-                    value="option2"
+                    type="radio"
+                    name="proximity"
+                    value="short"
                   />
-                  <label class="form-check-label" for="inlineCheckbox2"
-                    >Medium</label
-                  >
+                  <label class="form-check-label"> Short </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox3"
-                    value="option3"
+                    type="radio"
+                    name="proximity"
+                    value="medium"
                   />
-                  <label class="form-check-label" for="inlineCheckbox3"
-                    >Long</label
-                  >
+                  <label class="form-check-label"> Medium </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proximity"
+                    value="long"
+                  />
+                  <label class="form-check-label"> Long </label>
                 </div>
               </div>
 
@@ -217,35 +225,39 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox1"
-                    value="option1"
+                    type="radio"
+                    name="group"
+                    value="any"
+                    checked
                   />
-                  <label class="form-check-label" for="inlineCheckbox1"
-                    >Friends</label
-                  >
+                  <label class="form-check-label"> Any </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox2"
-                    value="option2"
+                    type="radio"
+                    name="group"
+                    value="friends"
                   />
-                  <label class="form-check-label" for="inlineCheckbox2"
-                    >Significant Other</label
-                  >
+                  <label class="form-check-label"> Friends </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox3"
-                    value="option3"
+                    type="radio"
+                    name="group"
+                    value="significant other"
                   />
-                  <label class="form-check-label" for="inlineCheckbox3"
-                    >Family</label
-                  >
+                  <label class="form-check-label"> Significant Other </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="group"
+                    value="family"
+                  />
+                  <label class="form-check-label"> Family </label>
                 </div>
               </div>
 
@@ -254,35 +266,39 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox1"
-                    value="option1"
+                    type="radio"
+                    name="energy"
+                    value="any"
+                    checked
                   />
-                  <label class="form-check-label" for="inlineCheckbox1"
-                    >Low</label
-                  >
+                  <label class="form-check-label"> Any </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox2"
-                    value="option2"
+                    type="radio"
+                    name="energy"
+                    value="low"
                   />
-                  <label class="form-check-label" for="inlineCheckbox2"
-                    >Medium</label
-                  >
+                  <label class="form-check-label"> Low </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox3"
-                    value="option3"
+                    type="radio"
+                    name="energy"
+                    value="medium"
                   />
-                  <label class="form-check-label" for="inlineCheckbox3"
-                    >High</label
-                  >
+                  <label class="form-check-label"> Medium </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="energy"
+                    value="high"
+                  />
+                  <label class="form-check-label"> High </label>
                 </div>
               </div>
 
@@ -291,31 +307,43 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox1"
-                    value="option1"
+                    type="radio"
+                    name="inout"
+                    value="any"
+                    checked
                   />
-                  <label class="form-check-label" for="inlineCheckbox1"
-                    >Indoor</label
-                  >
+                  <label class="form-check-label"> Any </label>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox2"
-                    value="option2"
+                    type="radio"
+                    name="inout"
+                    value="indoor"
                   />
-                  <label class="form-check-label" for="inlineCheckbox2"
-                    >Outdoor</label
-                  >
+                  <label class="form-check-label"> Indoor </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inout"
+                    value="outdoor"
+                  />
+                  <label class="form-check-label"> Outdoor </label>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-12">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="communitySubmit()"
+            >
+              Submit
+            </button>
           </div>
         </form>
       </div>
@@ -329,5 +357,6 @@
     <script src="/scripts/skeleton.js"></script>
     <script src="/scripts/firebaseAPI.js"></script>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/community.js"></script>
   </body>
 </html>
