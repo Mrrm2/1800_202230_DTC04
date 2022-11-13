@@ -87,18 +87,17 @@ function readActivity(activityID) {
 
 function setUnfavouriteButton() {
   // for if activity is favourite
-  $("#favourite").html(
-    `{
-      Favourite <i class='bi bi-star'></i>
-    }`
-  );
+
+  $("#favourite").html(`
+      Unfavourite <i class='bi bi-star-fill' style = 'color: rgb(255, 210, 48);'></i>
+      `);
 }
 
 function setFavouriteButton() {
   // for if activity is not favourite
-  $("#favourite").html(`{
-      Unfavourite <i class='bi bi-star'></i>
-    }`);
+  $("#favourite").html(`
+      Favourite <i class='bi bi-star'></i>
+    `);
 }
 
 function reactiveFavouriteButton() {
@@ -112,26 +111,42 @@ function reactiveFavouriteButton() {
         .then((doc) => {
           if (doc.data().favourites.includes(currActivity)) {
             console.log("activity in favorites");
-            //   // remove currActivity from firestore
-            //   db.collection("users")
-            //     .doc(user_ID)
-            //     .update({
-            //       favourites:
-            //         firebase.firestore.FieldValue.arrayRemove(currActivity),
-            //     });
-            //   console.log("removed from favourites");
             setUnfavouriteButton();
           } else {
-            console.log("activity not in favorites");
-            //   // add currActivity to database
-            //   db.collection("users")
-            //     .doc(user_ID)
-            //     .update({
-            //       favourites:
-            //         firebase.firestore.FieldValue.arrayUnion(currActivity),
-            //     });
-            //   console.log("added to favourites");
             setFavouriteButton();
+          }
+        });
+    }
+  });
+}
+
+$("#favourite").click(function () {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      user_ID = user.uid;
+      // check if activity id is in user's favourites
+      db.collection("users")
+        .doc(user_ID)
+        .get()
+        .then((doc) => {
+          if (doc.data().favourites.includes(currActivity)) {
+            setFavouriteButton();
+            // remove currActivity from firestore
+            db.collection("users")
+              .doc(user_ID)
+              .update({
+                favourites:
+                  firebase.firestore.FieldValue.arrayRemove(currActivity),
+              });
+          } else {
+            // add currActivity to database
+            db.collection("users")
+              .doc(user_ID)
+              .update({
+                favourites:
+                  firebase.firestore.FieldValue.arrayUnion(currActivity),
+              });
+            setUnfavouriteButton();
           }
         });
     } else {
@@ -140,7 +155,7 @@ function reactiveFavouriteButton() {
       }
     }
   });
-}
+});
 
 $(document).ready(async function () {
   await grabActivities(filters);
