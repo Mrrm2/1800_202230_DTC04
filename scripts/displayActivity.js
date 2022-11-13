@@ -63,17 +63,21 @@ function readActivity(activityID) {
     .onSnapshot((somedoc) => {
       //arrow notation
       console.log(somedoc.data().description); //.data() returns data object
-      document.getElementById("description").innerHTML = somedoc.data().description; //using javascript to display the data on the right place
-      document.getElementById("nameGoesHere").innerHTML = somedoc.data().name;
+      document.getElementById("description").innerHTML =
+        somedoc.data().description; //using javascript to display the data on the right place
+      document.getElementById("activity-title").innerHTML =
+        "<h2>" + somedoc.data().name + "</h2>";
       document.getElementById("activity-image").src = somedoc.data().picture;
       //  document.getElementById("activity-image").style.height = "50vh";  //데스크탑 화면으로 사진 크기 조정하고 싶다면
 
       document.getElementById("timeGoesHere").innerHTML = somedoc.data().time;
       document.getElementById("inoutGoesHere").innerHTML = somedoc.data().inout;
-      document.getElementById("energyGoesHere").innerHTML = somedoc.data().energy;
+      document.getElementById("energyGoesHere").innerHTML =
+        somedoc.data().energy;
       document.getElementById("costGoesHere").innerHTML = somedoc.data().cost;
       document.getElementById("groupGoesHere").innerHTML = somedoc.data().group;
-      document.getElementById("proximityGoesHere").innerHTML = somedoc.data().proximity;
+      document.getElementById("proximityGoesHere").innerHTML =
+        somedoc.data().proximity;
 
       //Here are other ways to access key:value data fields
       //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
@@ -125,7 +129,6 @@ $("#favourite").click(function () {
         .get()
         .then((doc) => {
           if (doc.data().favourites.includes(currActivity)) {
-            setFavouriteButton();
             // remove currActivity from firestore
             db.collection("users")
               .doc(user_ID)
@@ -133,6 +136,7 @@ $("#favourite").click(function () {
                 favourites:
                   firebase.firestore.FieldValue.arrayRemove(currActivity),
               });
+            setFavouriteButton();
           } else {
             // add currActivity to database
             db.collection("users")

@@ -57,9 +57,10 @@ aside {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
+  font-size: 20px;
 }
 
-#tags>span {
+#tags > span {
   margin: 6px;
 }
 
@@ -131,7 +132,7 @@ aside {
     margin: 0.5em auto;
   }
 
-  #description-tag-box>h3 {
+  #description-tag-box > h3 {
     font-size: 1em;
   }
 
