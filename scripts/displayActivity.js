@@ -65,7 +65,8 @@ function readActivity(activityID) {
       console.log(somedoc.data().description); //.data() returns data object
       document.getElementById("description").innerHTML =
         somedoc.data().description; //using javascript to display the data on the right place
-      document.getElementById("nameGoesHere").innerHTML = somedoc.data().name;
+      document.getElementById("activity-title").innerHTML =
+        "<h2>" + somedoc.data().name + "</h2>";
       document.getElementById("activity-image").src = somedoc.data().picture;
       //  document.getElementById("activity-image").style.height = "50vh";  //데스크탑 화면으로 사진 크기 조정하고 싶다면
 
@@ -128,7 +129,6 @@ $("#favourite").click(function () {
         .get()
         .then((doc) => {
           if (doc.data().favourites.includes(currActivity)) {
-            setFavouriteButton();
             // remove currActivity from firestore
             db.collection("users")
               .doc(user_ID)
@@ -136,6 +136,7 @@ $("#favourite").click(function () {
                 favourites:
                   firebase.firestore.FieldValue.arrayRemove(currActivity),
               });
+            setFavouriteButton();
           } else {
             // add currActivity to database
             db.collection("users")
