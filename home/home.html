@@ -42,7 +42,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="home-styles.css" />
+    <link rel="stylesheet" href="home.css" />
   </head>
 
   <body>
@@ -51,71 +51,77 @@
 
     <main>
       <!-------------- Content ---------------->
-      <div id="home">
+      <body>
         <h1 id="welcomeBanner"></h1>
         <button id="generate">Generate!</button>
         <div id="filters">
-          <div id="main-filter">
-            <div class="filter" id="cost">
-              Cost
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle is-flex"
-                  type="button"
-                  id="costDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  ----- None -----
-                </button>
-                <div class="dropdown-menu" aria-labelledby="costDropdown">
-                  <a class="dropdown-item" href="#">----- None -----</a>
-                  <a class="dropdown-item" href="#">$</a>
-                  <a class="dropdown-item" href="#">$$</a>
-                  <a class="dropdown-item" href="#">$$$</a>
+          <div id="main-filters">
+            <span> Filter Options:</span>
+            <div id="main-filter">
+              <div class="filter" id="cost">
+                Cost
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="costDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    ----- None -----
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="costDropdown">
+                    <a class="dropdown-item" href="#">----- None -----</a>
+                    <a class="dropdown-item" href="#">$</a>
+                    <a class="dropdown-item" href="#">$$</a>
+                    <a class="dropdown-item" href="#">$$$</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="filter" id="time">
-              Time
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle is-flex"
-                  type="button"
-                  id="timeDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  ----- None -----
-                </button>
-                <div class="dropdown-menu" aria-labelledby="timeDropdown">
-                  <a class="dropdown-item" href="#">----- None -----</a>
-                  <a class="dropdown-item" href="#">1-2H</a>
-                  <a class="dropdown-item" href="#">3-5H</a>
-                  <a class="dropdown-item" href="#">6-10H</a>
+              <div class="filter" id="time">
+                Time
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="timeDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    ----- None -----
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="timeDropdown">
+                    <a class="dropdown-item" href="#">----- None -----</a>
+                    <a class="dropdown-item" href="#">1-2H</a>
+                    <a class="dropdown-item" href="#">3-5H</a>
+                    <a class="dropdown-item" href="#">6-10H</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="filter" id="proximity">
-              Proximity
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle is-flex"
-                  type="button"
-                  id="proximityDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  ----- None -----
-                </button>
-                <div class="dropdown-menu" aria-labelledby="proximityDropdown">
-                  <a class="dropdown-item" href="#">----- None -----</a>
-                  <a class="dropdown-item" href="#">Close</a>
-                  <a class="dropdown-item" href="#">Medium</a>
-                  <a class="dropdown-item" href="#">Far</a>
+              <div class="filter" id="proximity">
+                Proximity
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="proximityDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    ----- None -----
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="proximityDropdown"
+                  >
+                    <a class="dropdown-item" href="#">----- None -----</a>
+                    <a class="dropdown-item" href="#">Close</a>
+                    <a class="dropdown-item" href="#">Medium</a>
+                    <a class="dropdown-item" href="#">Far</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -217,7 +223,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </body>
       <!------------- FOOTER ------------------>
       <nav id="footerPlaceholder"></nav>
     </main>
