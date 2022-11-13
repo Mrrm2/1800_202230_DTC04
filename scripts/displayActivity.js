@@ -53,7 +53,6 @@ function selectRandomActivityFromList(listOfActivities) {
   // randomly select an activity from the list
   var randomIndex = Math.floor(Math.random() * listOfActivities.length);
   var randomActivity = listOfActivities[randomIndex];
-  console.log(randomActivity);
   return randomActivity;
 }
 
@@ -110,7 +109,6 @@ function reactiveFavouriteButton() {
         .get()
         .then((doc) => {
           if (doc.data().favourites.includes(currActivity)) {
-            console.log("activity in favorites");
             setUnfavouriteButton();
           } else {
             setFavouriteButton();
@@ -155,6 +153,23 @@ $("#favourite").click(function () {
       }
     }
   });
+});
+
+$("#skip").click(function () {
+  listOfActivities.splice(listOfActivities.indexOf(currActivity), 1);
+  if (listOfActivities.length == 0) {
+    if (
+      confirm(
+        "No more activities matching your filters. Please update your filters."
+      )
+    ) {
+      window.location.href = "/home/home.html";
+    }
+  } else {
+    currActivity = selectRandomActivityFromList(listOfActivities);
+    readActivity(currActivity);
+    reactiveFavouriteButton();
+  }
 });
 
 $(document).ready(async function () {
