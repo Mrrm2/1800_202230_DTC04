@@ -5,6 +5,12 @@ form {
 main h1,
 main p {
   text-align: center;
+  padding: 0px 30px;
+}
+
+.center_div {
+  margin: 0 auto;
+  width: 980px;
 }
 
 main h1 {
@@ -13,4 +19,10 @@ main h1 {
 main p {
   color: gray;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .center_div {
+    width: 100%;
+  }
 }

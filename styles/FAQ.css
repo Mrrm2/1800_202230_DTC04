@@ -1,11 +1,13 @@
 #faq-title {
   max-width: 90vw;
   margin: 2em auto;
+  text-align: center;
 }
 
 #faq-accordion {
-  max-width: 90vw;
+  max-width: 980px;
   margin: auto;
+  padding: 15px 30px;
 }
 
 .accordion-button:is(.collapsed) {
@@ -23,4 +25,10 @@
 
 .accordion-button:after {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+@media screen and (max-width: 1000px) {
+  #faq-accordion {
+    width: 100%;
+  }
 }
