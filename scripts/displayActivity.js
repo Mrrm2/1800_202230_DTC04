@@ -62,7 +62,7 @@ function readActivity(activityID) {
     .doc(activityID) //name of the collection and documents should matach excatly with what you have in Firestore
     .onSnapshot((somedoc) => {
       //arrow notation
-      console.log(somedoc.data().description); //.data() returns data object
+      // console.log(somedoc.data().description); //.data() returns data object
       document.getElementById("description").innerHTML = somedoc.data().description; //using javascript to display the data on the right place
       document.getElementById("nameGoesHere").innerHTML = somedoc.data().name;
       document.getElementById("activity-image").src = somedoc.data().picture;

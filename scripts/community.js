@@ -29,6 +29,7 @@ function communitySubmit() {
         inout: inout,
       })
       .then(() => {
+        alert("Thank you.💕 Your suggestion received successfully!")
         window.location.href = "/home/home.html";
       });
   });

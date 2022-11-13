@@ -1,344 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Community</title>
 
-    <!------------------------------------------>
-    <!-- Bootstrap Library CSS JS CDN go here -->
-    <!------------------------------------------>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community</title>
 
-    <!-------------------------------------------------------->
-    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-    <!-------------------------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
-    />
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-    <!-------------------------------------------->
-    <!-- Other libraries and styles of your own -->
-    <!-------------------------------------------->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/community.css" />
-  </head>
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
-  <body>
-    <!-------------- Nav Bar ---------------->
-    <nav id="navbarPlaceholder"></nav>
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <!-------------------------------------------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/community.css" />
+</head>
 
-    <main>
-      <h1>Suggest an Activity</h1>
-      <p>
-        Is there an activity you'd like to see on our app? Fill out the form
-        below! <br />
-        We'll review your submission before adding it to our database, so
-        there's no pressure :)
-      </p>
+<body>
+  <!-------------- Nav Bar ---------------->
+  <nav id="navbarPlaceholder"></nav>
 
-      <div class="center_div">
-        <form class="row g-3" id="form">
-          <div class="col-12">
-            <label for="formGroupExampleInput">Activity Name</label>
-            <input type="text" class="form-control" id="activityName" />
-          </div>
+  <main>
+    <h1>Suggest an Activity</h1>
+    <p>
+      Is there an activity you'd like to see on our app? Fill out the form
+      below! <br />
+      We'll review your submission before adding it to our database, so
+      there's no pressure :)
+    </p>
 
-          <div class="col-12">
-            <label for="floatingTextarea2">Description</label>
-            <textarea
-              class="form-control"
-              placeholder="Description of your activity"
-              id="description"
-              style="height: 100px"
-            ></textarea>
-          </div>
+    <div class="center_div">
+      <form class="row g-3" id="form">
+        <div class="col-12">
+          <label for="formGroupExampleInput">Activity Name</label>
+          <input type="text" class="form-control" id="activityName" />
+        </div>
 
-          <div class="form-group">
-            Filters:
-            <div id="filters">
-              <div class="filter">
-                Cost:
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="cost"
-                    value="any"
-                    checked
-                  />
-                  <label class="form-check-label"> Any </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="cost"
-                    value="$"
-                  />
-                  <label class="form-check-label"> $ </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="cost"
-                    value="$$"
-                  />
-                  <label class="form-check-label"> $$ </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="cost"
-                    value="$$$"
-                  />
-                  <label class="form-check-label"> $$$ </label>
-                </div>
+        <div class="col-12">
+          <label for="floatingTextarea2">Description</label>
+          <textarea class="form-control" placeholder="Description of your activity" id="description"
+            style="height: 100px"></textarea>
+        </div>
+
+        <div class="form-group">
+          Filters:
+          <div id="filters">
+            <div class="filter">
+              Cost:
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="cost" value="any" checked />
+                <label class="form-check-label"> Any </label>
               </div>
-
-              <div class="filter">
-                Time:
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="time"
-                    value="any"
-                    checked
-                  />
-                  <label class="form-check-label"> Any </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="time"
-                    value="1-2H"
-                  />
-                  <label class="form-check-label"> 1-2H </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="time"
-                    value="3-5H"
-                  />
-                  <label class="form-check-label"> 3-5H </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="time"
-                    value="6-10H"
-                  />
-                  <label class="form-check-label"> 6-10H </label>
-                </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="cost" value="$" />
+                <label class="form-check-label"> $ </label>
               </div>
-
-              <div class="filter">
-                Proximity:
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="proximity"
-                    value="any"
-                    checked
-                  />
-                  <label class="form-check-label"> Any </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="proximity"
-                    value="short"
-                  />
-                  <label class="form-check-label"> Short </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="proximity"
-                    value="medium"
-                  />
-                  <label class="form-check-label"> Medium </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="proximity"
-                    value="long"
-                  />
-                  <label class="form-check-label"> Long </label>
-                </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="cost" value="$$" />
+                <label class="form-check-label"> $$ </label>
               </div>
-
-              <div class="filter">
-                Group:
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="group"
-                    value="any"
-                    checked
-                  />
-                  <label class="form-check-label"> Any </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="group"
-                    value="friends"
-                  />
-                  <label class="form-check-label"> Friends </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="group"
-                    value="significant other"
-                  />
-                  <label class="form-check-label"> Significant Other </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="group"
-                    value="family"
-                  />
-                  <label class="form-check-label"> Family </label>
-                </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="cost" value="$$$" />
+                <label class="form-check-label"> $$$ </label>
               </div>
+            </div>
 
-              <div class="filter">
-                Energy:
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="energy"
-                    value="any"
-                    checked
-                  />
-                  <label class="form-check-label"> Any </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="energy"
-                    value="low"
-                  />
-                  <label class="form-check-label"> Low </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="energy"
-                    value="medium"
-                  />
-                  <label class="form-check-label"> Medium </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="energy"
-                    value="high"
-                  />
-                  <label class="form-check-label"> High </label>
-                </div>
+            <div class="filter">
+              Time:
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="time" value="any" checked />
+                <label class="form-check-label"> Any </label>
               </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="time" value="1-2H" />
+                <label class="form-check-label"> 1-2H </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="time" value="3-5H" />
+                <label class="form-check-label"> 3-5H </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="time" value="6-10H" />
+                <label class="form-check-label"> 6-10H </label>
+              </div>
+            </div>
 
-              <div class="filter">
-                Indoor / Outdoor:
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inout"
-                    value="any"
-                    checked
-                  />
-                  <label class="form-check-label"> Any </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inout"
-                    value="indoor"
-                  />
-                  <label class="form-check-label"> Indoor </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inout"
-                    value="outdoor"
-                  />
-                  <label class="form-check-label"> Outdoor </label>
-                </div>
+            <div class="filter">
+              Proximity:
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="proximity" value="any" checked />
+                <label class="form-check-label"> Any </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="proximity" value="short" />
+                <label class="form-check-label"> Short </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="proximity" value="medium" />
+                <label class="form-check-label"> Medium </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="proximity" value="long" />
+                <label class="form-check-label"> Long </label>
+              </div>
+            </div>
+
+            <div class="filter">
+              Group:
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="group" value="any" checked />
+                <label class="form-check-label"> Any </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="group" value="friends" />
+                <label class="form-check-label"> Friends </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="group" value="significant other" />
+                <label class="form-check-label"> Significant Other </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="group" value="family" />
+                <label class="form-check-label"> Family </label>
+              </div>
+            </div>
+
+            <div class="filter">
+              Energy:
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="energy" value="any" checked />
+                <label class="form-check-label"> Any </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="energy" value="low" />
+                <label class="form-check-label"> Low </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="energy" value="medium" />
+                <label class="form-check-label"> Medium </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="energy" value="high" />
+                <label class="form-check-label"> High </label>
+              </div>
+            </div>
+
+            <div class="filter">
+              Indoor / Outdoor:
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="inout" value="any" checked />
+                <label class="form-check-label"> Any </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="inout" value="indoor" />
+                <label class="form-check-label"> Indoor </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="inout" value="outdoor" />
+                <label class="form-check-label"> Outdoor </label>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-12">
-            <button
-              type="button"
-              class="btn btn-primary"
-              onclick="communitySubmit()"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-      </div>
-    </main>
+        <div class="col-12">
+          <button type="button" class="btn btn-primary" onclick="communitySubmit()">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
 
-    <!------------- FOOTER ------------------>
-    <nav id="footerPlaceholder"></nav>
+  <!------------- FOOTER ------------------>
+  <nav id="footerPlaceholder"></nav>
 
-    <!----- Link to scripts of your own ------>
-    <!------- Load Navbar and Footer --------->
-    <script src="/scripts/skeleton.js"></script>
-    <script src="/scripts/firebaseAPI.js"></script>
-    <script src="/scripts/main.js"></script>
-    <script src="/scripts/community.js"></script>
-  </body>
+  <!----- Link to scripts of your own ------>
+  <!------- Load Navbar and Footer --------->
+  <script src="/scripts/skeleton.js"></script>
+  <script src="/scripts/firebaseAPI.js"></script>
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/community.js"></script>
+</body>
+
 </html>
