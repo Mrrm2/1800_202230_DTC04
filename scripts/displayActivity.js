@@ -53,7 +53,6 @@ function selectRandomActivityFromList(listOfActivities) {
   // randomly select an activity from the list
   var randomIndex = Math.floor(Math.random() * listOfActivities.length);
   var randomActivity = listOfActivities[randomIndex];
-  console.log(randomActivity);
   return randomActivity;
 }
 
@@ -87,18 +86,17 @@ function readActivity(activityID) {
 
 function setUnfavouriteButton() {
   // for if activity is favourite
-  $("#favourite").html(
-    `{
-      Favourite <i class='bi bi-star'></i>
-    }`
-  );
+
+  $("#favourite").html(`
+      Unfavourite <i class='bi bi-star-fill' style = 'color: rgb(255, 210, 48);'></i>
+      `);
 }
 
 function setFavouriteButton() {
   // for if activity is not favourite
-  $("#favourite").html(`{
-      Unfavourite <i class='bi bi-star'></i>
-    }`);
+  $("#favourite").html(`
+      Favourite <i class='bi bi-star'></i>
+    `);
 }
 
 function reactiveFavouriteButton() {
@@ -111,27 +109,42 @@ function reactiveFavouriteButton() {
         .get()
         .then((doc) => {
           if (doc.data().favourites.includes(currActivity)) {
-            console.log("activity in favorites");
-            //   // remove currActivity from firestore
-            //   db.collection("users")
-            //     .doc(user_ID)
-            //     .update({
-            //       favourites:
-            //         firebase.firestore.FieldValue.arrayRemove(currActivity),
-            //     });
-            //   console.log("removed from favourites");
             setUnfavouriteButton();
           } else {
-            console.log("activity not in favorites");
-            //   // add currActivity to database
-            //   db.collection("users")
-            //     .doc(user_ID)
-            //     .update({
-            //       favourites:
-            //         firebase.firestore.FieldValue.arrayUnion(currActivity),
-            //     });
-            //   console.log("added to favourites");
             setFavouriteButton();
+          }
+        });
+    }
+  });
+}
+
+$("#favourite").click(function () {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      user_ID = user.uid;
+      // check if activity id is in user's favourites
+      db.collection("users")
+        .doc(user_ID)
+        .get()
+        .then((doc) => {
+          if (doc.data().favourites.includes(currActivity)) {
+            setFavouriteButton();
+            // remove currActivity from firestore
+            db.collection("users")
+              .doc(user_ID)
+              .update({
+                favourites:
+                  firebase.firestore.FieldValue.arrayRemove(currActivity),
+              });
+          } else {
+            // add currActivity to database
+            db.collection("users")
+              .doc(user_ID)
+              .update({
+                favourites:
+                  firebase.firestore.FieldValue.arrayUnion(currActivity),
+              });
+            setUnfavouriteButton();
           }
         });
     } else {
@@ -140,7 +153,24 @@ function reactiveFavouriteButton() {
       }
     }
   });
-}
+});
+
+$("#skip").click(function () {
+  listOfActivities.splice(listOfActivities.indexOf(currActivity), 1);
+  if (listOfActivities.length == 0) {
+    if (
+      confirm(
+        "No more activities matching your filters. Please update your filters."
+      )
+    ) {
+      window.location.href = "/home/home.html";
+    }
+  } else {
+    currActivity = selectRandomActivityFromList(listOfActivities);
+    readActivity(currActivity);
+    reactiveFavouriteButton();
+  }
+});
 
 $(document).ready(async function () {
   await grabActivities(filters);
