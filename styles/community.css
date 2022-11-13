@@ -10,6 +10,7 @@ form {
 main h1,
 main p {
   text-align: center;
+  padding: 0px 30px;
 }
 
 main h1 {
