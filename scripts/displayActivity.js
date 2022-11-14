@@ -122,6 +122,28 @@ function reactiveFavouriteButton() {
   });
 }
 
+function removeFavourite(ID, activity_ID) {
+  db.collection("users")
+    .doc(ID)
+    .set(
+      {
+        favourites: firebase.firestore.FieldValue.arrayRemove(activity_ID),
+      },
+      { merge: true }
+    );
+}
+
+function addFavourite(ID, activity_ID) {
+  db.collection("users")
+    .doc(ID)
+    .set(
+      {
+        favourites: firebase.firestore.FieldValue.arrayUnion(activity_ID),
+      },
+      { merge: true }
+    );
+}
+
 $("#favourite").click(function () {
   console.log("clicked");
   firebase.auth().onAuthStateChanged(function (user) {
@@ -135,40 +157,16 @@ $("#favourite").click(function () {
           if (doc.data().favourites != undefined) {
             if (doc.data().favourites.includes(currActivity)) {
               // remove currActivity from firestore
-              db.collection("users")
-                .doc(user_ID)
-                .set(
-                  {
-                    favourites:
-                      firebase.firestore.FieldValue.arrayRemove(currActivity),
-                  },
-                  { merge: true }
-                );
+              removeFavourite(user_ID, currActivity);
               setFavouriteButton();
             } else {
               // add currActivity to database
-              db.collection("users")
-                .doc(user_ID)
-                .set(
-                  {
-                    favourites:
-                      firebase.firestore.FieldValue.arrayUnion(currActivity),
-                  },
-                  { merge: true }
-                );
+              addFavourite(user_ID, currActivity);
               setUnfavouriteButton();
             }
           } else {
             // add currActivity to database
-            db.collection("users")
-              .doc(user_ID)
-              .set(
-                {
-                  favourites:
-                    firebase.firestore.FieldValue.arrayUnion(currActivity),
-                },
-                { merge: true }
-              );
+            addFavourite(user_ID, currActivity);
             setUnfavouriteButton();
           }
         });
