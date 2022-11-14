@@ -88,9 +88,11 @@ function getFavorites() {
             });
         }
         displayList("activities_example");
+        
       });
     }
   });
 }
 
 getFavorites();
+
