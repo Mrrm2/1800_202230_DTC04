@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorite List</title>
 
-
     <!------------------------------------------>
     <!-- Bootstrap Library CSS JS CDN go here -->
     <!------------------------------------------>
@@ -53,48 +52,28 @@
 
     <main>
       <!-------------- Content ---------------->
-      <h1>Favorite List</h1>
-      
-      <div class="list-group">
-
-        <a href="/activity-page/activity-template.html" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <small class="text-muted">You can click it</small>
-        </a>
-
-        <a href="/activity-page/activity-template.html" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <small class="text-muted">You can click it</small>
-        </a>
-
-        <a href="/activity-page/activity-template.html" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <small class="text-muted">You can click it</small>
-        </a>
-
-        <a href="/activity-page/activity-template.html" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <small class="text-muted">You can click it</small>
-        </a>
-
+      <div class="container">
+        <h1>Favorite List</h1>
+        <div id="favorites_group"></div>
       </div>
 
+      <template id="favorites_template">
+        <div class="list-group">
+          <a
+            href="/activity-page/activity-template.html"
+            class="list-group-item list-group-item-action"
+          >
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1" id="activityName">List group item heading</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1" id="description">
+              Some placeholder content in a paragraph.
+            </p>
+            <small class="text-muted">You can click it</small>
+          </a>
+        </div>
+      </template>
     </main>
 
     <!------------- FOOTER ------------------>
@@ -105,6 +84,6 @@
     <script src="/scripts/skeleton.js"></script>
     <script src="/scripts/firebaseAPI.js"></script>
     <script src="/scripts/main.js"></script>
-
+    <script src="/scripts/favorite.js"></script>
   </body>
 </html>

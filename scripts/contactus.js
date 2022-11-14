@@ -1,3 +1,4 @@
+
 function contactUs() {
   let fname = document.getElementById("inputFirstName").value;
   let lname = document.getElementById("inputLastName").value;
@@ -12,6 +13,8 @@ function contactUs() {
       comment: comment,
     })
     .then(() => {
-      window.location.href = "/home/home.html";
+      alert("Thank you.💕 Your message received successfully!")
+      window.location.href = "/home/home.html"
     });
 }
+
