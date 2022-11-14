@@ -109,7 +109,10 @@ function reactiveFavouriteButton() {
         .doc(user_ID)
         .get()
         .then((doc) => {
-          if (doc.data().favourites.includes(currActivity)) {
+          if (
+            doc.data().favourites != undefined &&
+            doc.data().favourites.includes(currActivity)
+          ) {
             setUnfavouriteButton();
           } else {
             setFavouriteButton();
@@ -120,6 +123,7 @@ function reactiveFavouriteButton() {
 }
 
 $("#favourite").click(function () {
+  console.log("clicked");
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       user_ID = user.uid;
@@ -128,23 +132,31 @@ $("#favourite").click(function () {
         .doc(user_ID)
         .get()
         .then((doc) => {
-          if (doc.data().favourites.includes(currActivity)) {
-            // remove currActivity from firestore
-            db.collection("users")
-              .doc(user_ID)
-              .update({
-                favourites:
-                  firebase.firestore.FieldValue.arrayRemove(currActivity),
-              });
-            setFavouriteButton();
+          if (doc.data().favourites != undefined) {
+            if (doc.data().favourites.includes(currActivity)) {
+              // remove currActivity from firestore
+              db.collection("users")
+                .doc(user_ID)
+                .set(
+                  {
+                    favourites:
+                      firebase.firestore.FieldValue.arrayRemove(currActivity),
+                  },
+                  { merge: true }
+                );
+              setFavouriteButton();
+            }
           } else {
             // add currActivity to database
             db.collection("users")
               .doc(user_ID)
-              .update({
-                favourites:
-                  firebase.firestore.FieldValue.arrayUnion(currActivity),
-              });
+              .set(
+                {
+                  favourites:
+                    firebase.firestore.FieldValue.arrayUnion(currActivity),
+                },
+                { merge: true }
+              );
             setUnfavouriteButton();
           }
         });
