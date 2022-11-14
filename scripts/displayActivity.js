@@ -145,6 +145,18 @@ $("#favourite").click(function () {
                   { merge: true }
                 );
               setFavouriteButton();
+            } else {
+              // add currActivity to database
+              db.collection("users")
+                .doc(user_ID)
+                .set(
+                  {
+                    favourites:
+                      firebase.firestore.FieldValue.arrayUnion(currActivity),
+                  },
+                  { merge: true }
+                );
+              setUnfavouriteButton();
             }
           } else {
             // add currActivity to database
