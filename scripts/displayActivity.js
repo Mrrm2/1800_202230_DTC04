@@ -57,8 +57,8 @@ function selectRandomActivityFromList(listOfActivities) {
 }
 
 // 4. Display activities
-function readActivity(activityID) {
-  activities
+function readActivity(activityID) { 
+  activities           // db.collection("activities_example");
     .doc(activityID) //name of the collection and documents should matach excatly with what you have in Firestore
     .onSnapshot((somedoc) => {
       //arrow notation

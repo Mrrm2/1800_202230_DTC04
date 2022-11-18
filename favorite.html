@@ -41,15 +41,15 @@
   <main>
     <!-------------- Content ---------------->
     <div class="container">
-      <h1>Favorite List</h1>
+      <h1 id="after">Favorite List</h1>
       <div id="favorites_group"></div>
     </div>
 
     <template id="favorites_template">
       <div class="list-group">
         <!-- href="/activity-page/activity-template.html" -->
-        <!--onclick="goToActivity()"-->
-        <a href="#" class="list-group-item list-group-item-action">
+        <!-- class: read-more -->
+        <a class="list-group-item list-group-item-action read-more" >
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1" id="activityName">List group item heading</h5>
             <small class="text-muted">3 days ago</small>
@@ -57,7 +57,7 @@
           <p class="mb-1" id="description">
             Some placeholder content in a paragraph.
           </p>
-          <small class="text-muted">You can click it</small>
+          <small class="text-muted"><small id="activID">You can click it</small></small>
         </a>
       </div>
     </template>

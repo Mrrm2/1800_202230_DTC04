@@ -73,10 +73,15 @@ function getFavorites() {
                     var name = doc.data().name;
                     var desc = doc.data().description;
                     let newcard = favoritesTemplate.content.cloneNode(true);
+                    // getActID(name,name) // 🦄In case you wanna use local storage 
 
                     // update name and desc
                     newcard.querySelector("#activityName").innerHTML = name;
                     newcard.querySelector("#description").innerHTML = desc;
+
+                    //URL piggyback 🐷
+                    newcard.querySelector('.read-more').href = "onClickFavor.html?name=" + name
+                    // +"&activityID=" + activityID;
 
                     // attach
                     document
@@ -88,11 +93,20 @@ function getFavorites() {
             });
         }
         displayList("activities_example");
-        
-      });
+      }
+      );
     }
   });
 }
 
 getFavorites();
+
+// 🦄In case you wanna use local storage
+// function getActID(actName, id) {
+//   localStorage.setItem(actName, id)
+// }
+
+
+
+
 
