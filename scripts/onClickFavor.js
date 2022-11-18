@@ -1,14 +1,14 @@
 // If you wanna use local storage 🦄 - but doesn't work in this case anyway 
 // var actName = localStorage.getItem("Paint and Sip"); // key랑 value가 똑같아서 사실 필요없음ㅋ 
 
-function readActivity() { 
+function readActivity() {
   let params = new URL(window.location.href)
   // let activityID = params.searchParams.get("activityID")
   let name = params.searchParams.get("name")
 
   db.collection("activities_example")
-    .where("name", "==", name )
-    .get() 
+    .where("name", "==", name)
+    .get()
     .then(somedoc => {
       // console.log(somedoc.docs[0].data()) //checking
       document.getElementById("description").innerHTML = somedoc.docs[0].data().description; //using javascript to display the data on the right place
@@ -26,7 +26,7 @@ function readActivity() {
       //Here are other ways to access key:value data fields
       //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
       //$("#quote-goes-here").text(tuesdayDoc.data()["quote"]);                                    //using json object indexing
-        });
+    });
 }
 
 readActivity();
