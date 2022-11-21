@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Contact Us</title>
+		<title>Favourite List</title>
 
 		<!------------------------------------------>
 		<!-- Bootstrap Library CSS JS CDN go here -->
@@ -42,8 +42,8 @@
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="styles/contact.css" />
-		<link rel="stylesheet" href="/styles//style.css" />
+		<link rel="stylesheet" href="/styles/favourite.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
 	</head>
 
 	<body>
@@ -52,48 +52,29 @@
 
 		<main>
 			<!-------------- Content ---------------->
-			<h1>Contact Us</h1>
-			<p>
-				Do you have any questions? Please do not hesitate to contact us
-				directly.
-			</p>
-
-			<div class="center_div">
-				<form class="row g-3">
-					<div class="col-md-6">
-						<label for="inputFirstName" class="form-label">First Name</label>
-						<input type="text" class="form-control" id="inputFirstName" />
-					</div>
-					<div class="col-md-6">
-						<label for="inputLastName" class="form-label">Last Name</label>
-						<input type="text" class="form-control" id="inputLastName" />
-					</div>
-					<div class="col-12">
-						<label for="inputEmail4" class="form-label">Email</label>
-						<input
-							type="email"
-							class="form-control"
-							id="inputEmail4"
-							placeholder="youremail@email.com"
-						/>
-					</div>
-					<div class="col-12">
-						<label for="floatingTextarea2">Comments</label>
-						<textarea
-							class="form-control"
-							placeholder="Leave a comment here"
-							id="floatingTextarea2"
-							style="height: 100px"
-						></textarea>
-					</div>
-
-					<div class="col-12">
-						<button type="button" class="btn btn-primary" onclick="contactUs()">
-							Submit
-						</button>
-					</div>
-				</form>
+			<div class="container">
+				<h1 id="after">Favourite List</h1>
+				<div id="favourites_group"></div>
 			</div>
+
+			<template id="favourites_template">
+				<div class="list-group">
+					<!-- href="/activity-page/activity-template.html" -->
+					<!-- class: read-more -->
+					<a class="list-group-item list-group-item-action read-more">
+						<div class="d-flex w-100 justify-content-between">
+							<h5 class="mb-1" id="activityName">List group item heading</h5>
+							<small class="text-muted">3 days ago</small>
+						</div>
+						<p class="mb-1" id="description">
+							Some placeholder content in a paragraph.
+						</p>
+						<small class="text-muted"
+							><small id="activID">You can click it</small></small
+						>
+					</a>
+				</div>
+			</template>
 		</main>
 
 		<!------------- FOOTER ------------------>
@@ -104,6 +85,6 @@
 		<script src="/scripts/skeleton.js"></script>
 		<script src="/scripts/firebaseAPI.js"></script>
 		<script src="/scripts/main.js"></script>
-		<script src="/scripts/contactus.js"></script>
+		<script src="/scripts/favourite.js"></script>
 	</body>
 </html>

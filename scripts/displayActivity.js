@@ -171,7 +171,7 @@ $("#favourite").click(function () {
           }
         });
     } else {
-      if (confirm("Please sign in to add to your favorites!")) {
+      if (confirm("Please sign in to add to your favourites!")) {
         window.location.href = "/signin.html";
       }
     }
