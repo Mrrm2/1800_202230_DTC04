@@ -56,28 +56,58 @@ function selectRandomActivityFromList(listOfActivities) {
   return randomActivity;
 }
 
+// // 4. Display activities
+// function readActivity(activityID) {
+//   activities // db.collection("activities_example");
+//     .doc(activityID) //name of the collection and documents should matach excatly with what you have in Firestore
+//     .onSnapshot((doc) => {
+//       //arrow notation
+//       console.log(doc.data().description); //.data() returns data object
+//       document.getElementById("description").innerHTML = doc.data().description; //using javascript to display the data on the right place
+//       document.getElementById("activity-title").innerHTML =
+//         "<h2>" + doc.data().name + "</h2>";
+//       document.getElementById("activity-image").src = doc.data().picture;
+//       //  document.getElementById("activity-image").style.height = "50vh";  //데스크탑 화면으로 사진 크기 조정하고 싶다면
+
+//       document.getElementById("timeGoesHere").innerHTML = doc.data().time;
+//       document.getElementById("inoutGoesHere").innerHTML = doc.data().inout;
+//       document.getElementById("energyGoesHere").innerHTML = doc.data().energy;
+//       document.getElementById("costGoesHere").innerHTML = doc.data().cost;
+//       document.getElementById("groupGoesHere").innerHTML = doc.data().group;
+//       document.getElementById("proximityGoesHere").innerHTML =
+//         doc.data().proximity;
+
+//       //Here are other ways to access key:value data fields
+//       //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
+//       //$("#quote-goes-here").text(tuesdayDoc.data()["quote"]);                                    //using json object indexing
+//     });
+// }
+
 // 4. Display activities
-function readActivity(activityID) { 
-  activities           // db.collection("activities_example");
+function readActivity(activityID) {
+  let activityTemplate = document.getElementById("activity_template");
+  activities // db.collection("activities_example");
     .doc(activityID) //name of the collection and documents should matach excatly with what you have in Firestore
-    .onSnapshot((somedoc) => {
+    .onSnapshot((doc) => {
+      let newcard = activityTemplate.content.cloneNode(true);
       //arrow notation
-      console.log(somedoc.data().description); //.data() returns data object
-      document.getElementById("description").innerHTML =
-        somedoc.data().description; //using javascript to display the data on the right place
-      document.getElementById("activity-title").innerHTML =
-        "<h2>" + somedoc.data().name + "</h2>";
-      document.getElementById("activity-image").src = somedoc.data().picture;
+      console.log(doc.data().description); //.data() returns data object
+      newcard.querySelector("#description").innerHTML = doc.data().description; //using javascript to display the data on the right place
+      newcard.querySelector("#activity-title").innerHTML =
+        "<h2>" + doc.data().name + "</h2>";
+      newcard.querySelector("#activity-image").src = doc.data().picture;
       //  document.getElementById("activity-image").style.height = "50vh";  //데스크탑 화면으로 사진 크기 조정하고 싶다면
 
-      document.getElementById("timeGoesHere").innerHTML = somedoc.data().time;
-      document.getElementById("inoutGoesHere").innerHTML = somedoc.data().inout;
-      document.getElementById("energyGoesHere").innerHTML =
-        somedoc.data().energy;
-      document.getElementById("costGoesHere").innerHTML = somedoc.data().cost;
-      document.getElementById("groupGoesHere").innerHTML = somedoc.data().group;
-      document.getElementById("proximityGoesHere").innerHTML =
-        somedoc.data().proximity;
+      newcard.querySelector("#timeGoesHere").innerHTML = doc.data().time;
+      newcard.querySelector("#inoutGoesHere").innerHTML = doc.data().inout;
+      newcard.querySelector("#energyGoesHere").innerHTML = doc.data().energy;
+      newcard.querySelector("#costGoesHere").innerHTML = doc.data().cost;
+      newcard.querySelector("#groupGoesHere").innerHTML = doc.data().group;
+      newcard.querySelector("#proximityGoesHere").innerHTML =
+        doc.data().proximity;
+
+      // attach
+      document.getElementById("activity_list").appendChild(newcard);
 
       //Here are other ways to access key:value data fields
       //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
@@ -100,7 +130,7 @@ function setFavouriteButton() {
     `);
 }
 
-function reactiveFavouriteButton() {
+reactiveFavouriteButton = function () {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       user_ID = user.uid;
@@ -120,7 +150,7 @@ function reactiveFavouriteButton() {
         });
     }
   });
-}
+};
 
 function removeFavourite(ID, activity_ID) {
   db.collection("users")
@@ -144,7 +174,7 @@ function addFavourite(ID, activity_ID) {
     );
 }
 
-$("#favourite").click(function () {
+favourite = function () {
   console.log("clicked");
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -176,9 +206,11 @@ $("#favourite").click(function () {
       }
     }
   });
-});
+};
 
-$("#skip").click(function () {
+skip = function () {
+  $("#activity_list").empty();
+  console.log("clicked");
   listOfActivities.splice(listOfActivities.indexOf(currActivity), 1);
   if (listOfActivities.length == 0) {
     if (
@@ -193,7 +225,7 @@ $("#skip").click(function () {
     readActivity(currActivity);
     reactiveFavouriteButton();
   }
-});
+};
 
 $(document).ready(async function () {
   await grabActivities(filters);
