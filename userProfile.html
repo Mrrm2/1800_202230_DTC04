@@ -54,10 +54,10 @@
 			<div class="container">
 				<h1>User Profile</h1>
 				<form>
-					<fieldset class="mb-3" id="personalInfoFields" disabled>
+					<fieldset class="mb-3" >
 						<div class="form-group">
 							<label>Name</label>
-							<input type="text" id="nameInput" class="form-control" />
+							<input type="text" id="nameInput" class="form-control personalInfoFields" disabled />
 						</div>
 						<div class="form-group">
 							<label>Email</label>
@@ -65,8 +65,17 @@
 								type="email"
 								id="emailInput"
 								class="form-control"
-								placeholder="Enter your email"
+								placeholder="Enter your email" disabled
 							/>
+
+						</div>
+						<div class="form-group">
+							<label>School</label>
+							<input type="text" id="schoolInput" class="form-control personalInfoFields" disabled />
+						</div>
+						<div class="form-group">
+							<label>City</label>
+							<input type="text" id="cityInput" class="form-control personalInfoFields" disabled />
 						</div>
 					</fieldset>
 
