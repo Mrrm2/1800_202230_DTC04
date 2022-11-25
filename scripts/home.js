@@ -27,7 +27,7 @@ for (let input of listOfInput) {
 	});
 }
 
-$('#generate').click(function () {
+$('.generate').click(function () {
 	localStorage.setItem('filtersForGenerate', JSON.stringify(userFilters));
 	window.location.href = '/activity-page/activity-template.html';
 

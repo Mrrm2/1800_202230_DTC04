@@ -34,6 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
+<<<<<<< HEAD
   <link rel="stylesheet" href="/styles/style.css" />
   <link rel="stylesheet" href="home.css" />
 </head>
@@ -152,10 +153,159 @@
                       <a class="dropdown-item" href="#">Indoor</a>
                       <a class="dropdown-item" href="#">Outdoor</a>
                     </div>
+=======
+    <main>
+      <!-------------- Content ---------------->
+      <body>
+        <h1 id="welcomeBanner"></h1>
+        <!-- <button id="generate">Generate!</button> -->
+        <p id="welcome-text">
+          You can generate a random activity by clicking the button below.
+          <br />
+          You can also tailor your results by selecting the filter options.
+        </p>
+        <div class="generate" id="generate2">
+          <button id="generateBtn2">Generate Now!</button>
+        </div>
+        <div id="filters">
+          <span> Filter Options:</span>
+          <div id="filter-wrapper">
+            <div id="main-filter">
+              <div class="filter" id="cost">
+                Cost
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="costDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="costDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">$</a>
+                    <a class="dropdown-item" href="#">$$</a>
+                    <a class="dropdown-item" href="#">$$$</a>
+                  </div>
+                </div>
+              </div>
+              <div class="filter" id="time">
+                Time
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="timeDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="timeDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">1-2H</a>
+                    <a class="dropdown-item" href="#">3-5H</a>
+                    <a class="dropdown-item" href="#">6-10H</a>
+                  </div>
+                </div>
+              </div>
+              <div class="filter" id="proximity">
+                Proximity
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="proximityDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="proximityDropdown"
+                  >
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">Close</a>
+                    <a class="dropdown-item" href="#">Medium</a>
+                    <a class="dropdown-item" href="#">Far</a>
                   </div>
                 </div>
               </div>
             </div>
+            <div id="more-filter">
+              <div class="filter" id="group">
+                Group
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="groupDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="groupDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">Friends</a>
+                    <a class="dropdown-item" href="#">Significant Other</a>
+                    <a class="dropdown-item" href="#">Family</a>
+                  </div>
+                </div>
+              </div>
+              <div class="filter" id="energy">
+                Energy
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="energyDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="energyDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">Low</a>
+                    <a class="dropdown-item" href="#">Medium</a>
+                    <a class="dropdown-item" href="#">High</a>
+                  </div>
+                </div>
+              </div>
+              <div class="filter" id="inout">
+                Indoor / Outdoor
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="inoutDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="inoutDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">Indoor</a>
+                    <a class="dropdown-item" href="#">Outdoor</a>
+>>>>>>> 43ceeb562771e9dba4583667975119d8571bc9f7
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="generate" id="generate">
+            <button id="generateBtn">Generate!</button>
           </div>
         </div>
       </div>
