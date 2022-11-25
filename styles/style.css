@@ -34,3 +34,69 @@ main {
   width: 100%;
   height: 2.5rem;
 }
+
+/* ----------color------------ */
+
+.navbar-light {  /* --navbar-- */
+  background-color: #f9ebd5 !important;
+}
+
+.navbar-brand{
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5rem;
+}
+
+/* .bg-info {  
+  background-color: #FA9500 !important;
+} */ /*--Not sure-- */
+
+body {
+  background-color: #faf8f1;
+}
+
+.bg-white {  /* --footer-- */
+  background-color: #fbf8f1  !important;
+
+}
+
+#welcomeBanner{
+  background-color: #faf8f1 !important;
+}
+
+.btn-primary {
+  /* color: #7C6A0A; */
+  /* font-size: 150%; */
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5rem;
+
+  background-color: #AE7E63;
+  border-color: #C89F83;
+  border-width: thick
+}
+
+.btn-outline-secondary{
+  /* color: #7C6A0A; */
+  /* font-size: 150%; */
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5rem;
+
+  background-color: #E1C9B1;
+  border-color: #C89F83;
+  border-width: thick
+}
+
+#skipsignupbutton{
+  font-size: 20px;
+  color: #7C6A0A !important; 
+  font-family: 'Indie Flower', cursive;
+}
+
+#generate{
+  background-color: #AE7E63 !important;
+  border-color: #C89F83 !important;
+  border-width: thick !important;
+
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5rem;
+  color: white !important;
+}
