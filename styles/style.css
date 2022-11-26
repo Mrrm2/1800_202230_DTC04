@@ -94,7 +94,7 @@ body {
 	border-color: #c89f83;
 	border-width: thick;
 }
-.btn-secondary {
+#editBtn {
 	/* --user profile-- */
 	background-color: #e1c9b1;
 	border-color: #c89f83;
