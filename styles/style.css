@@ -1,50 +1,50 @@
 #skipsignup {
-  padding: 0.75em;
-  font-size: 0.8em;
+	padding: 0.75em;
+	font-size: 0.8em;
 }
 
 #skipsignup a {
-  color: lightgray;
+	color: lightgray;
 }
 
 footer {
-  bottom: 0;
-  height: 3em;
-  margin-bottom: 0.8em;
-  position: absolute;
-  width: 100%;
+	bottom: 0;
+	height: 3em;
+	margin-bottom: 0.8em;
+	position: absolute;
+	width: 100%;
 }
 
 #footerborder {
-  border-top: 1px solid #ccc;
+	border-top: 1px solid #ccc;
 }
 
 body {
-  position: relative;
-  min-height: 100vh;
+	position: relative;
+	min-height: 100vh;
 }
 
 main {
-  padding-bottom: 4em;
+	padding-bottom: 4em;
 }
 
 #footerPlaceHolder {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
 }
 
 /* ----------color------------ */
 
 .navbar-light {
-  /* --navbar-- */
-  background-color: #f9ebd5 !important;
+	/* --navbar-- */
+	background-color: #f9ebd5 !important;
 }
 
 .navbar-brand {
-  font-family: "Indie Flower", cursive;
-  font-size: 1.5rem;
+	font-family: 'Josefin Slab';
+	font-size: 1.5rem;
 }
 
 /* .bg-info {  
@@ -52,42 +52,42 @@ main {
 } */ /*--Not sure-- */
 
 body {
-  background-color: #faf8f1;
+	background-color: #faf8f1;
 }
 
 .bg-white {
-  /* --footer-- */
-  background-color: #fbf8f1 !important;
+	/* --footer-- */
+	background-color: #fbf8f1 !important;
 }
 
 #welcomeBanner {
-  background-color: #faf8f1 !important;
+	background-color: #faf8f1 !important;
 }
 
 .btn-primary {
-  /* color: #7C6A0A; */
-  /* font-size: 150%; */
-  font-family: "Indie Flower", cursive;
-  font-size: 1.5rem;
+	/* color: #7C6A0A; */
+	/* font-size: 150%; */
+	font-family: 'Josefin Slab';
+	font-size: 1.5rem;
 
-  background-color: #ae7e63;
-  border-color: #c89f83;
-  border-width: thick;
+	background-color: #ae7e63;
+	border-color: #c89f83;
+	border-width: thick;
 }
 
 .btn-outline-secondary {
-  /* color: #7C6A0A; */
-  /* font-size: 150%; */
-  font-family: "Indie Flower", cursive;
-  font-size: 1.5rem;
+	/* color: #7C6A0A; */
+	/* font-size: 150%; */
+	font-family: 'Josefin Slab';
+	font-size: 1.5rem;
 
-  background-color: #e1c9b1;
-  border-color: #c89f83;
-  border-width: thick;
+	background-color: #e1c9b1;
+	border-color: #c89f83;
+	border-width: thick;
 }
 
 #skipsignupbutton {
-  font-size: 20px;
-  color: #7c6a0a !important;
-  font-family: "Indie Flower", cursive;
+	font-size: 20px;
+	color: #7c6a0a !important;
+	font-family: 'Josefin Slab';
 }
