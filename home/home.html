@@ -1,220 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Activity</title>
-		<!------------------------------------------>
-		<!-- Bootstrap Library CSS JS CDN go here -->
-		<!------------------------------------------>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-			crossorigin="anonymous"
-		/>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-			crossorigin="anonymous"
-		></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity</title>
+    <!------------------------------------------>
+    <!-- Bootstrap Library CSS JS CDN go here -->
+    <!------------------------------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-		<!-------------------------------------------------------->
-		<!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-		<!-------------------------------------------------------->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-		<link
-			type="text/css"
-			rel="stylesheet"
-			href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
-		/>
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
+    />
 
-		<!-------------------------------------------->
-		<!-- Other libraries and styles of your own -->
-		<!-------------------------------------------->
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
-		<!-- font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Josefin+Slab"
-			rel="stylesheet"
-		/>
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans"
+      rel="stylesheet"
+    />
 
-		<link rel="stylesheet" href="/styles/style.css" />
-		<link rel="stylesheet" href="home.css" />
-	</head>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="home.css" />
+  </head>
 
-	<body>
-		<!-------------- Nav Bar ---------------->
-		<nav id="navbarPlaceholder"></nav>
-		<main>
-			<!-------------- Content ---------------->
-			<body>
-				<h1 id="welcomeBanner"></h1>
-				<div id="generate2">
-					<button class="generate" id="generateBtn2">Generate!</button>
-				</div>
-				<div id="filters">
-					<span> Filter Options:</span>
-					<div id="filter-wrapper">
-						<div id="main-filter">
-							<div class="filter" id="cost">
-								Cost
-								<div class="dropdown">
-									<button
-										class="btn btn-secondary dropdown-toggle is-flex"
-										type="button"
-										id="costDropdown"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										None
-									</button>
-									<div class="dropdown-menu" aria-labelledby="costDropdown">
-										<a class="dropdown-item" href="#">None</a>
-										<a class="dropdown-item" href="#">$</a>
-										<a class="dropdown-item" href="#">$$</a>
-										<a class="dropdown-item" href="#">$$$</a>
-									</div>
-								</div>
-							</div>
-							<div class="filter" id="time">
-								Time
-								<div class="dropdown">
-									<button
-										class="btn btn-secondary dropdown-toggle is-flex"
-										type="button"
-										id="timeDropdown"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										None
-									</button>
-									<div class="dropdown-menu" aria-labelledby="timeDropdown">
-										<a class="dropdown-item" href="#">None</a>
-										<a class="dropdown-item" href="#">1-2H</a>
-										<a class="dropdown-item" href="#">3-5H</a>
-										<a class="dropdown-item" href="#">6-10H</a>
-									</div>
-								</div>
-							</div>
-							<div class="filter" id="proximity">
-								Proximity
-								<div class="dropdown">
-									<button
-										class="btn btn-secondary dropdown-toggle is-flex"
-										type="button"
-										id="proximityDropdown"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										None
-									</button>
-									<div
-										class="dropdown-menu"
-										aria-labelledby="proximityDropdown"
-									>
-										<a class="dropdown-item" href="#">None</a>
-										<a class="dropdown-item" href="#">Close</a>
-										<a class="dropdown-item" href="#">Medium</a>
-										<a class="dropdown-item" href="#">Far</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div id="more-filter">
-							<div class="filter" id="group">
-								Group
-								<div class="dropdown">
-									<button
-										class="btn btn-secondary dropdown-toggle is-flex"
-										type="button"
-										id="groupDropdown"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										None
-									</button>
-									<div class="dropdown-menu" aria-labelledby="groupDropdown">
-										<a class="dropdown-item" href="#">None</a>
-										<a class="dropdown-item" href="#">Friends</a>
-										<a class="dropdown-item" href="#">Significant Other</a>
-										<a class="dropdown-item" href="#">Family</a>
-									</div>
-								</div>
-							</div>
-							<div class="filter" id="energy">
-								Energy
-								<div class="dropdown">
-									<button
-										class="btn btn-secondary dropdown-toggle is-flex"
-										type="button"
-										id="energyDropdown"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										None
-									</button>
-									<div class="dropdown-menu" aria-labelledby="energyDropdown">
-										<a class="dropdown-item" href="#">None</a>
-										<a class="dropdown-item" href="#">Low</a>
-										<a class="dropdown-item" href="#">Medium</a>
-										<a class="dropdown-item" href="#">High</a>
-									</div>
-								</div>
-							</div>
-							<div class="filter" id="inout">
-								Indoor / Outdoor
-								<div class="dropdown">
-									<button
-										class="btn btn-secondary dropdown-toggle is-flex"
-										type="button"
-										id="inoutDropdown"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										None
-									</button>
-									<div class="dropdown-menu" aria-labelledby="inoutDropdown">
-										<a class="dropdown-item" href="#">None</a>
-										<a class="dropdown-item" href="#">Indoor</a>
-										<a class="dropdown-item" href="#">Outdoor</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="generate">
-						<button class="generate" id="generateBtn">
-							Generate with filters!
-						</button>
-					</div>
-				</div>
-			</body>
-			<!------------- FOOTER ------------------>
-			<nav id="footerPlaceholder"></nav>
-		</main>
+  <body>
+    <!-------------- Nav Bar ---------------->
+    <nav id="navbarPlaceholder"></nav>
+    <main>
+      <!-------------- Content ---------------->
+      <body>
+        <h1 id="welcomeBanner"></h1>
+        <div id="generate2">
+          <button class="generate" id="generateBtn2">GENERATE!</button>
+        </div>
+        <div id="filters">
+          <span> Filter Options:</span>
+          <div id="filter-wrapper">
+            <div id="main-filter">
+              <div class="filter" id="cost">
+                Cost
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="costDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="costDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">$</a>
+                    <a class="dropdown-item" href="#">$$</a>
+                    <a class="dropdown-item" href="#">$$$</a>
+                  </div>
+                </div>
+              </div>
+              <div class="filter" id="time">
+                Time
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="timeDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="timeDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">1-2H</a>
+                    <a class="dropdown-item" href="#">3-5H</a>
+                    <a class="dropdown-item" href="#">6-10H</a>
+                  </div>
+                </div>
+              </div>
+              <div class="filter" id="proximity">
+                Proximity
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="proximityDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="proximityDropdown"
+                  >
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">Close</a>
+                    <a class="dropdown-item" href="#">Medium</a>
+                    <a class="dropdown-item" href="#">Far</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="more-filter">
+              <div class="filter" id="group">
+                Group
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="groupDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="groupDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">Friends</a>
+                    <a class="dropdown-item" href="#">Significant Other</a>
+                    <a class="dropdown-item" href="#">Family</a>
+                  </div>
+                </div>
+              </div>
+              <div class="filter" id="energy">
+                Energy
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="energyDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="energyDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">Low</a>
+                    <a class="dropdown-item" href="#">Medium</a>
+                    <a class="dropdown-item" href="#">High</a>
+                  </div>
+                </div>
+              </div>
+              <div class="filter" id="inout">
+                Indoor / Outdoor
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle is-flex"
+                    type="button"
+                    id="inoutDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    None
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="inoutDropdown">
+                    <a class="dropdown-item" href="#">None</a>
+                    <a class="dropdown-item" href="#">Indoor</a>
+                    <a class="dropdown-item" href="#">Outdoor</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="generate">
+            <button class="generate" id="generateBtn">
+              GENERATE with filters!
+            </button>
+          </div>
+        </div>
+      </body>
+      <!------------- FOOTER ------------------>
+      <nav id="footerPlaceholder"></nav>
+    </main>
 
-		<!----- Link to scripts of your own ------>
-		<!------- Load Navbar and Footer --------->
-		<script src="/scripts/skeleton.js"></script>
-		<script src="/scripts/firebaseAPI.js"></script>
-		<script src="/scripts/main.js"></script>
-		<script src="/scripts/home.js"></script>
-	</body>
+    <!----- Link to scripts of your own ------>
+    <!------- Load Navbar and Footer --------->
+    <script src="/scripts/skeleton.js"></script>
+    <script src="/scripts/firebaseAPI.js"></script>
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/home.js"></script>
+  </body>
 </html>

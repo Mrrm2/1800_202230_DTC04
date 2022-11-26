@@ -1,16 +1,28 @@
 main {
-  width: 80%;
+  width: 980px;
   margin: 1em auto;
 }
 
 #aboutus-title {
   text-align: center;
-  font-size: 2em;
-  font-weight: 600;
-  padding: 1em 0;
+  margin: 30px 0px;
+}
+
+.card-group {
+  padding: 15px;
+}
+
+.card {
+  margin: 15px;
 }
 
 .card img {
   width: 80%;
   margin: 1em auto;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    width: 100%;
+  }
 }
