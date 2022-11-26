@@ -43,6 +43,11 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="/styles/style.css" />
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+	  
 	</head>
 
 	<body>
@@ -52,6 +57,7 @@
 		<main>
 			<!-------------- Content ---------------->
 			<div class="container">
+				<br>
 				<h1>User Profile</h1>
 				<form>
 					<fieldset class="mb-3" >
@@ -84,11 +90,12 @@
 							type="button"
 							class="btn btn-secondary"
 							onclick="editUserInfo()"
+							style="color: black"
 						>
 							Edit
 						</button>
 						<span style="width: 10px"></span>
-						<button type="button" class="btn btn-info" onclick="saveUserInfo()">
+						<button type="button" class="btn btn-info" onclick="saveUserInfo()" >
 							Save
 						</button>
 					</div>

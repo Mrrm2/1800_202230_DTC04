@@ -91,7 +91,18 @@ aside {
 
 #description-tag-box {
 	padding: 20px;
+	background-color: #f0e2cc;
+	/* f5ebe1 */
+    /* border-color: #C89F83; */
+    /* border-width: thick */
 }
+/* --color-- */
+#activity-title {
+	background-color: #E1C9B1;
+    border-color: #C89F83;
+    border-width: thick
+}
+
 
 /* Medium Screen */
 @media screen and (max-width: 1100px) {

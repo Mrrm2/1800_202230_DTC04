@@ -1,90 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Favourite List</title>
 
-		<!------------------------------------------>
-		<!-- Bootstrap Library CSS JS CDN go here -->
-		<!------------------------------------------>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-			crossorigin="anonymous"
-		/>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-			crossorigin="anonymous"
-		></script>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Favourite List</title>
 
-		<!-------------------------------------------------------->
-		<!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-		<!-------------------------------------------------------->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-		<link
-			type="text/css"
-			rel="stylesheet"
-			href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
-		/>
+	<!------------------------------------------>
+	<!-- Bootstrap Library CSS JS CDN go here -->
+	<!------------------------------------------>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 
-		<!-------------------------------------------->
-		<!-- Other libraries and styles of your own -->
-		<!-------------------------------------------->
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="/styles/favourite.css" />
-		<link rel="stylesheet" href="/styles/style.css" />
-	</head>
+	<!-------------------------------------------------------->
+	<!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+	<!-------------------------------------------------------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
-	<body>
-		<!-------------- Nav Bar ---------------->
-		<nav id="navbarPlaceholder"></nav>
+	<!-------------------------------------------->
+	<!-- Other libraries and styles of your own -->
+	<!-------------------------------------------->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="/styles/favourite.css" />
+	<link rel="stylesheet" href="/styles/style.css" />
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
-		<main>
-			<!-------------- Content ---------------->
-			<div class="container">
-				<h1 id="after">Favourite List</h1>
-				<div id="favourites_group"></div>
+</head>
+
+<body>
+	<!-------------- Nav Bar ---------------->
+	<nav id="navbarPlaceholder"></nav>
+
+	<main>
+		<!-------------- Content ---------------->
+		<div class="container">
+			<h1 id="after">Favourite List</h1>
+			<div id="favourites_group"></div>
+		</div>
+
+		<template id="favourites_template">
+			<div class="list-group">
+				<!-- href="/activity-page/activity-template.html" -->
+				<!-- class: read-more -->
+				<a class="list-group-item list-group-item-action read-more">
+					<div class="d-flex w-100 justify-content-between">
+						<h5 class="mb-1" id="activityName">List group item heading</h5>
+						<small class="text-muted">3 days ago</small>
+					</div>
+					<p class="mb-1" id="description">
+						Some placeholder content in a paragraph.
+					</p>
+					<small class="text-muted"><small id="activID">You can click it</small></small>
+				</a>
 			</div>
+		</template>
+	</main>
 
-			<template id="favourites_template">
-				<div class="list-group">
-					<!-- href="/activity-page/activity-template.html" -->
-					<!-- class: read-more -->
-					<a class="list-group-item list-group-item-action read-more">
-						<div class="d-flex w-100 justify-content-between">
-							<h5 class="mb-1" id="activityName">List group item heading</h5>
-							<small class="text-muted">3 days ago</small>
-						</div>
-						<p class="mb-1" id="description">
-							Some placeholder content in a paragraph.
-						</p>
-						<small class="text-muted"
-							><small id="activID">You can click it</small></small
-						>
-					</a>
-				</div>
-			</template>
-		</main>
+	<!------------- FOOTER ------------------>
+	<nav id="footerPlaceholder"></nav>
 
-		<!------------- FOOTER ------------------>
-		<nav id="footerPlaceholder"></nav>
+	<!----- Link to scripts of your own ------>
+	<!------- Load Navbar and Footer --------->
+	<script src="/scripts/skeleton.js"></script>
+	<script src="/scripts/firebaseAPI.js"></script>
+	<script src="/scripts/main.js"></script>
+	<script src="/scripts/favourite.js"></script>
+</body>
 
-		<!----- Link to scripts of your own ------>
-		<!------- Load Navbar and Footer --------->
-		<script src="/scripts/skeleton.js"></script>
-		<script src="/scripts/firebaseAPI.js"></script>
-		<script src="/scripts/main.js"></script>
-		<script src="/scripts/favourite.js"></script>
-	</body>
 </html>

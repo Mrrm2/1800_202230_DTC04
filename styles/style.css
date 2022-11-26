@@ -74,7 +74,13 @@ body {
   border-width: thick
 }
 
-.btn-outline-secondary{
+.btn-info {
+  background-color: #AE7E63;
+  border-color: #C89F83;
+  border-width: thick;
+}
+
+.btn-outline-secondary {
   /* color: #7C6A0A; */
   /* font-size: 150%; */
   font-family: 'Indie Flower', cursive;
@@ -83,6 +89,11 @@ body {
   background-color: #E1C9B1;
   border-color: #C89F83;
   border-width: thick
+}
+.btn-secondary {
+  background-color: #E1C9B1;
+  border-color: #C89F83;
+  border-width: thick;
 }
 
 #skipsignupbutton{
