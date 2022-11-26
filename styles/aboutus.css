@@ -1,0 +1,16 @@
+main {
+  width: 80%;
+  margin: 1em auto;
+}
+
+#aboutus-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+  padding: 1em 0;
+}
+
+.card img {
+  width: 80%;
+  margin: 1em auto;
+}
