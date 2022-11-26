@@ -47,10 +47,6 @@ main {
 	font-size: 1.5rem;
 }
 
-/* .bg-info {  
-  background-color: #FA9500 !important;
-} */ /*--Not sure-- */
-
 body {
 	background-color: #faf8f1;
 }
@@ -61,12 +57,10 @@ body {
 }
 
 #welcomeBanner {
-	background-color: #faf8f1 ;
+	background-color: #faf8f1;
 }
 
 .btn-primary {
-	/* color: #7C6A0A; */
-	/* font-size: 150%; */
 	font-family: 'Josefin Slab';
 	font-size: 1.5rem;
 
@@ -74,13 +68,34 @@ body {
 	border-color: #c89f83;
 	border-width: thick;
 }
+.btn-info {
+	/* --user profile-- */
+	background-color: #ae7e63;
+	border-color: #c89f83;
+	border-width: thick;
+
+	color: white;
+}
+.btn-info:focus {
+	background-color: #af7453;
+	border-color: #af7453;
+	box-shadow: 1px 1px #888888;
+}
+
+/* .btn-info:after {
+} */
+
 
 .btn-outline-secondary {
-	/* color: #7C6A0A; */
-	/* font-size: 150%; */
 	font-family: 'Josefin Slab';
 	font-size: 1.5rem;
 
+	background-color: #e1c9b1;
+	border-color: #c89f83;
+	border-width: thick;
+}
+.btn-secondary {
+	/* --user profile-- */
 	background-color: #e1c9b1;
 	border-color: #c89f83;
 	border-width: thick;
