@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Community</title>
 
 		<!------------------------------------------>
 		<!-- Bootstrap Library CSS JS CDN go here -->
@@ -37,14 +42,12 @@
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
 		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Josefin+Slab"
-			rel="stylesheet"
-		/>
 		<link rel="stylesheet" href="/styles/style.css" />
 		<link rel="stylesheet" href="/styles/community.css" />
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab" />
 	</head>
 
 	<body>
@@ -120,136 +123,226 @@
 									<label class="form-check-label"> $$$ </label>
 								</div>
 							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="cost" value="$" />
-								<label class="form-check-label"> $ </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="cost" value="$$" />
-								<label class="form-check-label"> $$ </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="cost" value="$$$" />
-								<label class="form-check-label"> $$$ </label>
-							</div>
-						</div>
 
-						<div class="filter">
-							Time:
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="time" value="any" checked />
-								<label class="form-check-label"> Any </label>
+							<div class="filter">
+								Time:
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="time"
+										value="any"
+										checked
+									/>
+									<label class="form-check-label"> Any </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="time"
+										value="1-2H"
+									/>
+									<label class="form-check-label"> 1-2H </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="time"
+										value="3-5H"
+									/>
+									<label class="form-check-label"> 3-5H </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="time"
+										value="6-10H"
+									/>
+									<label class="form-check-label"> 6-10H </label>
+								</div>
 							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="time" value="1-2H" />
-								<label class="form-check-label"> 1-2H </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="time" value="3-5H" />
-								<label class="form-check-label"> 3-5H </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="time" value="6-10H" />
-								<label class="form-check-label"> 6-10H </label>
-							</div>
-						</div>
 
-						<div class="filter">
-							Proximity:
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="proximity" value="any" checked />
-								<label class="form-check-label"> Any </label>
+							<div class="filter">
+								Proximity:
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="proximity"
+										value="any"
+										checked
+									/>
+									<label class="form-check-label"> Any </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="proximity"
+										value="short"
+									/>
+									<label class="form-check-label"> Short </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="proximity"
+										value="medium"
+									/>
+									<label class="form-check-label"> Medium </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="proximity"
+										value="long"
+									/>
+									<label class="form-check-label"> Long </label>
+								</div>
 							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="proximity" value="short" />
-								<label class="form-check-label"> Short </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="proximity" value="medium" />
-								<label class="form-check-label"> Medium </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="proximity" value="long" />
-								<label class="form-check-label"> Long </label>
-							</div>
-						</div>
 
-						<div class="filter">
-							Group:
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="group" value="any" checked />
-								<label class="form-check-label"> Any </label>
+							<div class="filter">
+								Group:
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="group"
+										value="any"
+										checked
+									/>
+									<label class="form-check-label"> Any </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="group"
+										value="friends"
+									/>
+									<label class="form-check-label"> Friends </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="group"
+										value="significant other"
+									/>
+									<label class="form-check-label"> Significant Other </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="group"
+										value="family"
+									/>
+									<label class="form-check-label"> Family </label>
+								</div>
 							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="group" value="friends" />
-								<label class="form-check-label"> Friends </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="group" value="significant other" />
-								<label class="form-check-label"> Significant Other </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="group" value="family" />
-								<label class="form-check-label"> Family </label>
-							</div>
-						</div>
 
-						<div class="filter">
-							Energy:
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="energy" value="any" checked />
-								<label class="form-check-label"> Any </label>
+							<div class="filter">
+								Energy:
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="energy"
+										value="any"
+										checked
+									/>
+									<label class="form-check-label"> Any </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="energy"
+										value="low"
+									/>
+									<label class="form-check-label"> Low </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="energy"
+										value="medium"
+									/>
+									<label class="form-check-label"> Medium </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="energy"
+										value="high"
+									/>
+									<label class="form-check-label"> High </label>
+								</div>
 							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="energy" value="low" />
-								<label class="form-check-label"> Low </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="energy" value="medium" />
-								<label class="form-check-label"> Medium </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="energy" value="high" />
-								<label class="form-check-label"> High </label>
-							</div>
-						</div>
 
-						<div class="filter">
-							Indoor / Outdoor:
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="inout" value="any" checked />
-								<label class="form-check-label"> Any </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="inout" value="indoor" />
-								<label class="form-check-label"> Indoor </label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="inout" value="outdoor" />
-								<label class="form-check-label"> Outdoor </label>
+							<div class="filter">
+								Indoor / Outdoor:
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="inout"
+										value="any"
+										checked
+									/>
+									<label class="form-check-label"> Any </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="inout"
+										value="indoor"
+									/>
+									<label class="form-check-label"> Indoor </label>
+								</div>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="inout"
+										value="outdoor"
+									/>
+									<label class="form-check-label"> Outdoor </label>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-12">
-					<button type="button" class="btn btn-primary" onclick="communitySubmit()">
-						Submit
-					</button>
-				</div>
-			</form>
-		</div>
-	</main>
+					<div class="col-12">
+						<button
+							type="button"
+							class="btn btn-primary"
+							onclick="communitySubmit()"
+						>
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+		</main>
 
-	<!------------- FOOTER ------------------>
-	<nav id="footerPlaceholder"></nav>
+		<!------------- FOOTER ------------------>
+		<nav id="footerPlaceholder"></nav>
 
-	<!----- Link to scripts of your own ------>
-	<!------- Load Navbar and Footer --------->
-	<script src="/scripts/skeleton.js"></script>
-	<script src="/scripts/firebaseAPI.js"></script>
-	<script src="/scripts/main.js"></script>
-	<script src="/scripts/community.js"></script>
-</body>
-
+		<!----- Link to scripts of your own ------>
+		<!------- Load Navbar and Footer --------->
+		<script src="/scripts/skeleton.js"></script>
+		<script src="/scripts/firebaseAPI.js"></script>
+		<script src="/scripts/main.js"></script>
+		<script src="/scripts/community.js"></script>
+	</body>
 </html>
