@@ -11,12 +11,14 @@
 }
 
 .accordion-button:is(.collapsed) {
-  background-color: rgb(227, 227, 227);
+  background-color: #f0e2cc;
+  /* background-color: rgb(227, 227, 227); */
 }
 
 .accordion-button:not(.collapsed) {
   color: black;
-  background-color: rgb(175, 175, 175);
+  background-color: #c89f83;
+  /* background-color: rgb(175, 175, 175); */
 }
 
 .accordion-button:focus {

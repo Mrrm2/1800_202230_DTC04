@@ -38,16 +38,16 @@
 		<!-------------------------------------------->
 		<!-- Other libraries and styles of your own -->
 		<!-------------------------------------------->
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab" />
 		<link
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="/styles/style.css" />
 		<link rel="stylesheet" href="/styles/community.css" />
-		<!-- font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab" />
 	</head>
 
 	<body>
@@ -166,12 +166,12 @@
 							</div>
 
 							<div class="filter">
-								Proximity:
+								Travel required:
 								<div class="form-check">
 									<input
 										class="form-check-input"
 										type="radio"
-										name="proximity"
+										name="travel"
 										value="any"
 										checked
 									/>
@@ -181,25 +181,25 @@
 									<input
 										class="form-check-input"
 										type="radio"
-										name="proximity"
-										value="short"
+										name="travel"
+										value="yes"
 									/>
-									<label class="form-check-label"> Short </label>
+									<label class="form-check-label"> Yes </label>
 								</div>
 								<div class="form-check">
 									<input
 										class="form-check-input"
 										type="radio"
-										name="proximity"
-										value="medium"
+										name="travel"
+										value="no"
 									/>
-									<label class="form-check-label"> Medium </label>
+									<label class="form-check-label"> No </label>
 								</div>
-								<div class="form-check">
+								<div class="form-check" style="display: none;">
 									<input
 										class="form-check-input"
 										type="radio"
-										name="proximity"
+										name="travel"
 										value="long"
 									/>
 									<label class="form-check-label"> Long </label>
