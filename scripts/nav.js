@@ -9,7 +9,7 @@ function checkSignIn() {
 			if (confirm('Please sign in to access this feature!')) {
 				window.location.href = '/signin.html';
 			} else {
-				window.location.href = '/home/home.html';
+				window.location.href = '/home.html';
 			}
 		}
 	});
@@ -26,7 +26,7 @@ function check_SignIn() {
 			if (confirm('Please sign in to access this feature!')) {
 				window.location.href = '/signin.html';
 			} else {
-				window.location.href = '/home/home.html';
+				window.location.href = '/home.html';
 			}
 		}
 	});

@@ -189,7 +189,7 @@ skip = function () {
 				'No more activities matching your filters. Please update your filters.'
 			)
 		) {
-			window.location.href = '/home/home.html';
+			window.location.href = '/home.html';
 		}
 	} else {
 		currActivity = selectRandomActivityFromList(listOfActivities);

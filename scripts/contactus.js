@@ -13,6 +13,6 @@ function contactUs() {
 		})
 		.then(() => {
 			alert('Thank you.💕 Your message received successfully!');
-			window.location.href = '/home/home.html';
+			window.location.href = '/home.html';
 		});
 }

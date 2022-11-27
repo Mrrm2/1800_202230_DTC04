@@ -5,7 +5,7 @@ signOut = function signOut() {
 		.signOut()
 		.then(() => {
 			// Sign-out successful.
-			window.location.href = '/home/home.html';
+			window.location.href = '/home.html';
 		})
 		.catch((error) => {
 			// An error happened.
