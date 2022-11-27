@@ -57,12 +57,12 @@ body {
 }
 
 #welcomeBanner {
-	background-color: #faf8f1;
+  background-color: #faf8f1;
 }
 
 .btn-primary {
-	font-family: 'Josefin Slab';
-	font-size: 1.5rem;
+  font-family: "Josefin Slab";
+  font-size: 1.5rem;
 
   background-color: #ae7e63;
 
@@ -75,25 +75,25 @@ body {
   box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
 }
 .btn-info {
-	/* --user profile-- */
-	background-color: #ae7e63;
-	border-color: #c89f83;
-	border-width: thick;
+  /* --user profile-- */
+  background-color: #ae7e63;
+  border-color: #c89f83;
+  border-width: thick;
 
-	color: white;
+  color: white;
 }
 .btn-info:focus {
-	background-color: #af7453;
-	border-color: #af7453;
-	box-shadow: 1px 1px #888888;
+  background-color: #af7453;
+  border-color: #af7453;
+  box-shadow: 1px 1px #888888;
 }
 
 /* .btn-info:after {
 } */
 
 .btn-outline-secondary {
-	font-family: 'Josefin Slab';
-	font-size: 1.5rem;
+  font-family: "Josefin Slab";
+  font-size: 1.5rem;
 
   background-color: #e1c9b1;
 
@@ -105,15 +105,34 @@ body {
 
   box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
 }
-#editBtn {
-	/* --user profile-- */
-	background-color: #e1c9b1;
-	border-color: #c89f83;
-	border-width: thick;
-}
 
 #skipsignupbutton {
-	font-size: 20px;
-	color: #7c6a0a !important;
-	font-family: 'Josefin Slab';
+  font-size: 20px;
+  color: #7c6a0a !important;
+  font-family: "Josefin Slab";
+}
+
+/* --user profile-- */
+#editBtn {
+  background-color: #e1c9b1;
+
+  border-radius: 0.45em;
+  border-top: 2px solid #c89f83;
+  border-left: 2px solid #c89f83;
+  border-bottom: 2px solid #755543;
+  border-right: 2px solid #755543;
+
+  box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
+}
+
+#saveBtn {
+  background-color: #ae7e63;
+
+  border-radius: 0.45em;
+  border-top: 2px solid #c89f83;
+  border-left: 2px solid #c89f83;
+  border-bottom: 2px solid #755543;
+  border-right: 2px solid #755543;
+
+  box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
 }
