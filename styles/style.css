@@ -1,10 +1,10 @@
-#skipsignup {
-  padding: 0.75em;
-  font-size: 0.8em;
+body {
+  position: relative;
+  min-height: 100vh;
 }
 
-#skipsignup a {
-  color: lightgray;
+main {
+  padding-bottom: 4em;
 }
 
 footer {
@@ -17,15 +17,6 @@ footer {
 
 #footerborder {
   border-top: 1px solid #ccc;
-}
-
-body {
-  position: relative;
-  min-height: 100vh;
-}
-
-main {
-  padding-bottom: 4em;
 }
 
 #footerPlaceHolder {
@@ -56,11 +47,13 @@ body {
   background-color: #fbf8f1 !important;
 }
 
-#welcomeBanner {
-  background-color: #faf8f1;
+/* ----------for index.html------------ */
+#skipsignup {
+  padding: 1.5em;
+  font-size: 0.8em;
 }
 
-.btn-primary {
+#signIn {
   font-family: "Josefin Slab";
   font-size: 1.5rem;
 
@@ -74,24 +67,8 @@ body {
 
   box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
 }
-.btn-info {
-  /* --user profile-- */
-  background-color: #ae7e63;
-  border-color: #c89f83;
-  border-width: thick;
 
-  color: white;
-}
-.btn-info:focus {
-  background-color: #af7453;
-  border-color: #af7453;
-  box-shadow: 1px 1px #888888;
-}
-
-/* .btn-info:after {
-} */
-
-.btn-outline-secondary {
+#signUp {
   font-family: "Josefin Slab";
   font-size: 1.5rem;
 
@@ -107,32 +84,13 @@ body {
 }
 
 #skipsignupbutton {
-  font-size: 20px;
-  color: #7c6a0a !important;
+  font-size: 18px;
+  color: #ae7e63 !important;
   font-family: "Josefin Slab";
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* --user profile-- */
-#editBtn {
-  background-color: #e1c9b1;
-
-  border-radius: 0.45em;
-  border-top: 2px solid #c89f83;
-  border-left: 2px solid #c89f83;
-  border-bottom: 2px solid #755543;
-  border-right: 2px solid #755543;
-
-  box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
-}
-
-#saveBtn {
-  background-color: #ae7e63;
-
-  border-radius: 0.45em;
-  border-top: 2px solid #c89f83;
-  border-left: 2px solid #c89f83;
-  border-bottom: 2px solid #755543;
-  border-right: 2px solid #755543;
-
-  box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
+#skipsignupbutton:active {
+  color: #e1c9b1 !important;
 }

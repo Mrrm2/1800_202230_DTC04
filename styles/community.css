@@ -32,6 +32,19 @@ main p {
   padding-bottom: 1em;
 }
 
+#submitBtn {
+  background-color: #ae7e63;
+  color: white;
+
+  border-radius: 0.45em;
+  border-top: 2px solid #c89f83;
+  border-left: 2px solid #c89f83;
+  border-bottom: 2px solid #755543;
+  border-right: 2px solid #755543;
+
+  box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
+}
+
 @media screen and (max-width: 1000px) {
   .center_div {
     width: 100%;
