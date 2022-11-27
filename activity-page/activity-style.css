@@ -15,9 +15,9 @@ main {
   padding: 0.75em;
 
   text-align: center;
-  border: 1px solid rgb(159, 158, 158);
+  border: 2px solid #c89f83;
   border-radius: 8px;
-  background-color: rgb(252, 247, 247);
+  background-color: #e1c9b1;
 }
 
 #activity-title h2 {
@@ -89,18 +89,13 @@ aside {
   width: 33%;
 }
 
+.topTag {
+  padding-bottom: 0.5em;
+}
+
 #description-tag-box {
   padding: 20px;
   background-color: #f0e2cc;
-  /* f5ebe1 */
-  /* border-color: #C89F83; */
-  /* border-width: thick */
-}
-/* --color-- */
-#activity-title {
-  background-color: #e1c9b1;
-  border-color: #c89f83;
-  border-width: thick;
 }
 
 /* Medium Screen */
@@ -116,6 +111,12 @@ aside {
   .btn-success,
   .btn-danger {
     padding: 6px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #tags {
+    font-size: 1em;
   }
 }
 
@@ -144,6 +145,10 @@ aside {
   }
 
   #description-tag-box > h3 {
+    font-size: 1em;
+  }
+
+  #tags {
     font-size: 1em;
   }
 
