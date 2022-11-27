@@ -1,10 +1,21 @@
+function addActivity(uid, submissionID) {
+  db.collection('users')
+    .doc(uid)
+    .set(
+      {
+        submissions: firebase.firestore.FieldValue.arrayUnion(submissionID),
+      },
+      { merge: true }
+    );
+}
+
 function communitySubmit() {
   firebase.auth().onAuthStateChanged((user) => {
     let uid = user.uid;
     let fname = user.displayName;
     let email = user.email;
-    let activityName = document.getElementById("activityName").value;
-    let description = document.getElementById("description").value;
+    let activityName = document.getElementById('activityName').value;
+    let description = document.getElementById('description').value;
     let cost = document.querySelector('input[name="cost"]:checked').value;
     let time = document.querySelector('input[name="time"]:checked').value;
     let proximity = document.querySelector(
@@ -14,7 +25,7 @@ function communitySubmit() {
     let energy = document.querySelector('input[name="energy"]:checked').value;
     let inout = document.querySelector('input[name="inout"]:checked').value;
 
-    db.collection("community")
+    db.collection('community')
       .add({
         uid: uid,
         firstName: fname,
@@ -28,9 +39,10 @@ function communitySubmit() {
         energy: energy,
         inout: inout,
       })
-      .then(() => {
-        alert("Thank you.💕 Your suggestion received successfully!")
-        window.location.href = "/home.html";
+      .then((newDoc) => {
+        alert('Thank you.💕 Your suggestion has been received successfully!');
+        window.location.href = '/home.html';
+        addActivity(uid, newDoc.id);
       });
   });
 }
