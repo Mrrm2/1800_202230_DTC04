@@ -19,30 +19,31 @@ async function grabActivities(filters) {
 			var activity = doc.data();
 			// for each activity, check if it matches the filters
 			if (
-				(filters.cost == 'None' ||
-					filters.cost == activity.cost ||
-					activities.cost == 'Any') &&
-				(filters.time == 'None' ||
-					filters.time == activity.time ||
-					activities.time == 'Any') &&
-				(filters.proximity == 'None' ||
-					filters.proximity == activity.proximity ||
-					activities.proximity == 'Any') &&
-				(filters.group == 'None' ||
-					filters.group == activity.group ||
-					activities.group == 'Any') &&
-				(filters.energy == 'None' ||
-					filters.energy == activity.energy ||
-					activities.energy == 'Any') &&
-				(filters.inout == 'None' ||
-					filters.inout == activity.inout ||
-					activities.inout == 'Any')
+				(filters.cost == 'Any' ||
+					activity.cost == 'Any' ||
+					filters.cost == activity.cost) &&
+				(filters.time == 'Any' ||
+					activity.time == 'Any' ||
+					filters.time == activity.time) &&
+				(filters.proximity == 'Any' ||
+					activity.proximity == 'Any' ||
+					filters.proximity == activity.proximity) &&
+				(filters.group == 'Any' ||
+					activity.group == 'Any' ||
+					filters.group == activity.group) &&
+				(filters.energy == 'Any' ||
+					activity.energy == 'Any' ||
+					filters.energy == activity.energy) &&
+				(filters.inout == 'Any' ||
+					activity.inout == 'Any' ||
+					filters.inout == activity.inout)
 			) {
 				// if it matches, add it to the list of activities
 				listOfActivities.push(doc.id);
 			}
 		});
 	});
+	console.log(listOfActivities);
 }
 
 // 3. Randomly select an activity from the list, display it, and remove from list1

@@ -1,11 +1,11 @@
 const listOfInput = document.querySelectorAll('.dropdown-item');
 let userFilters = {
-	cost: 'None',
-	time: 'None',
-	proximity: 'None',
-	group: 'None',
-	energy: 'None',
-	inout: 'None',
+	cost: 'Any',
+	time: 'Any',
+	proximity: 'Any',
+	group: 'Any',
+	energy: 'Any',
+	inout: 'Any',
 };
 
 // Function to change dropdown text to selection and put filters in the userFilters object
@@ -19,11 +19,11 @@ for (let input of listOfInput) {
 		input.parentElement.parentElement.children[0].innerHTML = value;
 
 		// Add value and key into userFilters object
-		if (value === '----- None -----') {
-			value = 'None';
+		if (value == 'None') {
+			userFilters[key] = 'Any';
+		} else {
+			userFilters[key] = String(value);
 		}
-		userFilters[key] = value;
-		// console.log(userFilters);
 	});
 }
 
