@@ -25,28 +25,16 @@ function populateInfo() {
 				}
 			});
 		} else {
-			// not logged in // 일어나지 않을 일이지만 그냥 씀
+			// not logged in 
 			console.log('no one is logged in');
 		}
 	});
 }
 populateInfo();
 
-// $('body').on('click', "#edituser", function() {
-// 	console.log('hi')
-// 	const nodeList = document.querySelectorAll(".personalInfoFields");
-// 	console.log(nodeList)
-// 	document.querySelectorAll(".personalInfoFields").disabled = false;
-
-// })
 
 function editUserInfo() {
-	console.log("inside function")
-	// const nodeList = document.querySelectorAll(".personalInfoFields");
-	// console.log(nodeList);
-
 	let nodeList = document.querySelectorAll(".personalInfoFields")
-	// .disabled = false;
 	for (let i = 0; i < nodeList.length; i++) {
 		nodeList[i].disabled = false;
 	}
