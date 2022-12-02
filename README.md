@@ -48,11 +48,6 @@ Top level of project folder:
 
 It has the following subfolders and files:
 ├───images
-│       /account.png
-│       /drink1.png
-│       /drink2.png
-│       /drink3.png
-│       /image.jpg
 │       /joseph.JPG
 │       /kira.jpg
 │       /society.png
