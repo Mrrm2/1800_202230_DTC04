@@ -8,7 +8,7 @@
 
 This browser based web application is used to help indecisive young adults to plan group activities/hangouts by generating a list of activities based on their criteria.
 
-- I am Kira and I am excited because I want to make something
+- I am Kira and I am excited to create our first web app!
 - I am YeEun and I am excited for this project because I make something and more again!
 - I am Joseph and I am excited because I want to start coding
 
