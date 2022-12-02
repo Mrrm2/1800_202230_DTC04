@@ -10,6 +10,16 @@ main h1 {
   color: gray;
 }
 
+#go-back {
+  margin-bottom: 40px;
+  padding: 0.25em 0.5em;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center; 
+  background-color: transparent;
+}
+
 .list-group {
   margin: 0 auto;
   width: 980px;

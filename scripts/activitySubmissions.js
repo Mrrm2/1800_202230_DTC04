@@ -1,3 +1,7 @@
+function goBack() {
+  history.back();
+}
+
 function displayList(collection, activityLength, submissionList) {
   let submissionTemplate = document.getElementById('submission_template');
 
