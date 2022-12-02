@@ -1,0 +1,46 @@
+#skipsignup {
+  padding: 1.5em;
+  font-size: 0.8em;
+}
+
+#signIn {
+  font-family: "Josefin Slab";
+  font-size: 1.5rem;
+
+  background-color: #ae7e63;
+
+  border-radius: 0.45em;
+  border-top: 2px solid #c89f83;
+  border-left: 2px solid #c89f83;
+  border-bottom: 2px solid #755543;
+  border-right: 2px solid #755543;
+
+  box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
+}
+
+#signUp {
+  font-family: "Josefin Slab";
+  font-size: 1.5rem;
+
+  background-color: #e1c9b1;
+
+  border-radius: 0.45em;
+  border-top: 2px solid #c89f83;
+  border-left: 2px solid #c89f83;
+  border-bottom: 2px solid #755543;
+  border-right: 2px solid #755543;
+
+  box-shadow: rgb(159, 159, 159) 0px 20px 30px -18px;
+}
+
+#skipsignupbutton {
+  font-size: 18px;
+  color: #ae7e63 !important;
+  font-family: "Josefin Slab";
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#skipsignupbutton:active {
+  color: #e1c9b1 !important;
+}
