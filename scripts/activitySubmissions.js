@@ -10,7 +10,6 @@ function displayList(collection, activityLength, submissionList) {
 				// iterate through each submissionID in favourites
 				for (var i = 0; i < activityLength; i++) {
 					if (submissionList[i] == submissionID) {
-						console.log(submissionList[i]);
 						var name = doc.data().activityName;
 						var desc = doc.data().description;
 						let newcard = submissionTemplate.content.cloneNode(true);

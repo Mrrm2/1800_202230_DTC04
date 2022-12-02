@@ -9,7 +9,6 @@ var activities = db.collection('activities_example'); // change to the name of t
 
 // 1. Get activity filters from local storage
 var filters = JSON.parse(localStorage.getItem('filtersForGenerate'));
-console.log(filters);
 var listOfActivities = [];
 
 async function grabActivities(filters) {
@@ -43,7 +42,6 @@ async function grabActivities(filters) {
 			}
 		});
 	});
-	console.log(listOfActivities);
 }
 
 // 3. Randomly select an activity from the list, display it, and remove from list1
@@ -66,9 +64,6 @@ function readActivity(activityID) {
 		.doc(activityID) //name of the collection and documents should matach excatly with what you have in Firestore
 		.onSnapshot((doc) => {
 			let newcard = activityTemplate.content.cloneNode(true);
-			//.data() returns data object
-			console.log(doc.data().description);
-
 			//using javascript to display the data on the right place
 			newcard.querySelector('#description').innerHTML = doc.data().description;
 			newcard.querySelector('#activity-title').innerHTML =
@@ -147,7 +142,6 @@ function addFavourite(ID, activity_ID) {
 }
 
 favourite = function () {
-	console.log('clicked');
 	firebase.auth().onAuthStateChanged(function (user) {
 		if (user) {
 			user_ID = user.uid;
@@ -182,7 +176,6 @@ favourite = function () {
 
 skip = function () {
 	$('#activity_list').empty();
-	console.log('clicked');
 	listOfActivities.splice(listOfActivities.indexOf(currActivity), 1);
 	if (listOfActivities.length == 0) {
 		if (

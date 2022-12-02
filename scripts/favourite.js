@@ -2,7 +2,6 @@ function getFavourites() {
 	firebase.auth().onAuthStateChanged((user) => {
 		if (user) {
 			// get favourited activities' ID from user
-			console.log('userID', user.uid);
 			currentUser = db.collection('users').doc(user.uid);
 			currentUser.get().then((userDoc) => {
 				var activityList = userDoc.data().favourites;
@@ -29,7 +28,6 @@ function getFavourites() {
 								// iterate through each activityID in favourites
 								for (var i = 0; i < activityLength; i++) {
 									if (activityList[i] == activityID) {
-										console.log(activityList[i]);
 										var name = doc.data().name;
 										var desc = doc.data().description;
 										let newcard = favouritesTemplate.content.cloneNode(true);

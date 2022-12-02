@@ -79,7 +79,6 @@ function addFavourite(ID, activity_ID) {
 }
 
 favourite = function () {
-	console.log('clicked');
 	firebase.auth().onAuthStateChanged(function (user) {
 		if (user) {
 			user_ID = user.uid;
