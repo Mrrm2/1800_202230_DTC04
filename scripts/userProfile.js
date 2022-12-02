@@ -12,7 +12,7 @@ function populateInfo() {
 				let userCity = userUID.data().city;
 
 				if (userName != null) {
-					document.getElementById('nameInput').value = userName; //value에다 넣으면 되는구나
+					document.getElementById('nameInput').value = userName;
 				}
 				if (userEmail != null) {
 					document.getElementById('emailInput').value = userEmail;
@@ -25,16 +25,15 @@ function populateInfo() {
 				}
 			});
 		} else {
-			// not logged in 
+			// not logged in
 			console.log('no one is logged in');
 		}
 	});
 }
 populateInfo();
 
-
 function editUserInfo() {
-	let nodeList = document.querySelectorAll(".personalInfoFields")
+	let nodeList = document.querySelectorAll('.personalInfoFields');
 	for (let i = 0; i < nodeList.length; i++) {
 		nodeList[i].disabled = false;
 	}
@@ -48,16 +47,16 @@ function saveUserInfo() {
 
 	currentUser
 		.update({
-			// currentUser 다시 써서 var. // update()로 update
+			// Update current user's firestore information
 			name: userName,
 			email: userEmail,
 			school: userSchool,
-			city: userCity
+			city: userCity,
 		})
 		.then(() => {
 			alert('Document successfully updated!💕');
 		});
-	let saveList = document.querySelectorAll(".personalInfoFields")
+	let saveList = document.querySelectorAll('.personalInfoFields');
 	for (let i = 0; i < saveList.length; i++) {
 		saveList[i].disabled = true;
 	}

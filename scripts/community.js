@@ -1,48 +1,52 @@
 function addActivity(uid, submissionID) {
-  db.collection('users')
-    .doc(uid)
-    .set(
-      {
-        submissions: firebase.firestore.FieldValue.arrayUnion(submissionID),
-      },
-      { merge: true }
-    );
+	db.collection('users')
+		.doc(uid)
+		.set(
+			{
+				submissions: firebase.firestore.FieldValue.arrayUnion(submissionID),
+			},
+			{ merge: true }
+		);
 }
 
 function communitySubmit() {
-  firebase.auth().onAuthStateChanged((user) => {
-    let uid = user.uid;
-    let fname = user.displayName;
-    let email = user.email;
-    let activityName = document.getElementById('activityName').value;
-    let description = document.getElementById('description').value;
-    let cost = document.querySelector('input[name="cost"]:checked').value;
-    let time = document.querySelector('input[name="time"]:checked').value;
-    let proximity = document.querySelector(
-      'input[name="proximity"]:checked'
-    ).value;
-    let group = document.querySelector('input[name="group"]:checked').value;
-    let energy = document.querySelector('input[name="energy"]:checked').value;
-    let inout = document.querySelector('input[name="inout"]:checked').value;
+	firebase.auth().onAuthStateChanged((user) => {
+		// Set variables to user information
+		let uid = user.uid;
+		let fname = user.displayName;
+		let email = user.email;
 
-    db.collection('community')
-      .add({
-        uid: uid,
-        firstName: fname,
-        email: email,
-        activityName: activityName,
-        description: description,
-        cost: cost,
-        time: time,
-        proximity: proximity,
-        group: group,
-        energy: energy,
-        inout: inout,
-      })
-      .then((newDoc) => {
-        alert('Thank you.💕 Your suggestion has been received successfully!');
-        window.location.href = '/home.html';
-        addActivity(uid, newDoc.id);
-      });
-  });
+		// Get activity information from form
+		let activityName = document.getElementById('activityName').value;
+		let description = document.getElementById('description').value;
+		let cost = document.querySelector('input[name="cost"]:checked').value;
+		let time = document.querySelector('input[name="time"]:checked').value;
+		let proximity = document.querySelector(
+			'input[name="proximity"]:checked'
+		).value;
+		let group = document.querySelector('input[name="group"]:checked').value;
+		let energy = document.querySelector('input[name="energy"]:checked').value;
+		let inout = document.querySelector('input[name="inout"]:checked').value;
+
+		db.collection('community')
+			// Add activity to community collection
+			.add({
+				uid: uid,
+				firstName: fname,
+				email: email,
+				activityName: activityName,
+				description: description,
+				cost: cost,
+				time: time,
+				proximity: proximity,
+				group: group,
+				energy: energy,
+				inout: inout,
+			})
+			.then((newDoc) => {
+				alert('Thank you.💕 Your suggestion has been received successfully!');
+				window.location.href = '/home.html';
+				addActivity(uid, newDoc.id);
+			});
+	});
 }

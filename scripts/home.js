@@ -30,10 +30,6 @@ for (let input of listOfInput) {
 $('.generate').click(function () {
 	localStorage.setItem('filtersForGenerate', JSON.stringify(userFilters));
 	window.location.href = '/activity.html';
-
-	// add these to activity generation page
-	// console.log(JSON.parse(localStorage.getItem("filtersForGenerate")));
-	// window.onload = JSON.parse(localStorage.getItem("filtersForGenerate"));
 });
 
 function displayName() {

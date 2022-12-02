@@ -10,7 +10,7 @@ var uiConfig = {
 					.set({
 						name: user.displayName, //"users" collection
 						email: user.email, //with authenticated user's ID (user.uid)
-						favourites: firebase.firestore.FieldValue.arrayUnion('Favourites'),
+						// favourites: firebase.firestore.FieldValue.arrayUnion('Favourites'),
 					})
 					.then(function () {
 						console.log('New user added to firestore');
