@@ -105,5 +105,5 @@ Firebase hosting files:
 
 ## Contact Info
 - Kira Yoon: kyoon13@my.bcit.ca
-- YeEun Ha: 
+- YeEun Ha: yha16@my.bcit.ca
 - Joseph Chun: jchun26@my.bcit.ca
