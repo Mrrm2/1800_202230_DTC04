@@ -1,8 +1,9 @@
 ## Random Activity Generator
 
-- [General info](#general-info)
+- [General Info](#general-info)
 - [Technologies](#technologies)
 - [Contents](#content)
+- [Contact Info](#contact-info)
 
 ## General Info
 
@@ -29,24 +30,30 @@ Content of the project folder:
 Top level of project folder:
 ├── .gitignore
 ├── 404.html
-├── aboutus.html
-├── activity.html
-├── activitySubmissions.html
-├── community.html
-├── contact.html
-├── FAQ.html
-├── favourite.html
 ├── firebase.json
 ├── firestore.indexes.json
 ├── firestore.rules
-├── home.html
-├── index.html
-├── onClickFavor.html
-├── README.md
-├── signin.html
-└── userProfile.html
+└── README.md
 
 It has the following subfolders and files:
+├───activities_data
+│       /activities_example.txt
+│       /activities_example.xlsx
+│
+├───html
+│       /aboutus.html
+│       /activity.html
+│       /activitySubmissions.html
+│       /community.html
+│       /contactus.html
+│       /FAQ.html
+│       /favourite.html
+│       /home.html
+│       /index.html
+│       /onClickFavor.html
+│       /signin.html
+│       /userProfile.html
+│
 ├───images
 │       /joseph.JPG
 │       /kira.jpg
@@ -76,10 +83,11 @@ It has the following subfolders and files:
 │       /activity.css
 │       /activitySubmissions.css
 │       /community.css
-│       /contact.css
+│       /contactus.css
 │       /FAQ.css
 │       /favourite.css
 │       /home.css
+│       /index.css
 │       /signin.css
 │       /style.css
 │       /userProfile.css
@@ -94,3 +102,8 @@ Firebase hosting files:
 │       hosting..cache
 
 ```
+
+## Contact Info
+- Kira Yoon: kyoon13@my.bcit.ca
+- YeEun Ha: 
+- Joseph Chun: jchun26@my.bcit.ca
