@@ -1,6 +1,6 @@
 // Function for adding activity information from a txt file to firestore
 async function getCSVdata() {
-	const response = await fetch('/activities_example.txt'); //send get request
+	const response = await fetch('/activities_data/activities_example.txt'); //send get request
 	const data = await response.text(); //get file response
 	const list = data.split('\r\n').slice(1); //get line
 	list.forEach((row) => {

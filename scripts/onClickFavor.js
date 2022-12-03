@@ -105,7 +105,7 @@ favourite = function () {
 				});
 		} else {
 			if (confirm('Please sign in to add to your favourites!')) {
-				window.location.href = '/signin.html';
+				window.location.href = '/html/signin.html';
 			}
 		}
 	});

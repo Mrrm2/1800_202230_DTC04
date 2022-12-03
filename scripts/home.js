@@ -29,7 +29,7 @@ for (let input of listOfInput) {
 
 $('.generate').click(function () {
 	localStorage.setItem('filtersForGenerate', JSON.stringify(userFilters));
-	window.location.href = '/activity.html';
+	window.location.href = '/html/activity.html';
 });
 
 function displayName() {

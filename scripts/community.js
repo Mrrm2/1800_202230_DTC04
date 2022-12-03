@@ -45,7 +45,7 @@ function communitySubmit() {
 			})
 			.then((newDoc) => {
 				alert('Thank you.💕 Your suggestion has been received successfully!');
-				window.location.href = '/home.html';
+				window.location.href = '/html/home.html';
 				addActivity(uid, newDoc.id);
 			});
 	});

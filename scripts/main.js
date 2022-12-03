@@ -5,7 +5,7 @@ signOut = function signOut() {
 		.signOut()
 		.then(() => {
 			// Sign-out successful.
-			window.location.href = '/home.html';
+			window.location.href = '/html/home.html';
 		})
 		.catch((error) => {
 			// An error happened.
@@ -22,12 +22,12 @@ firebase.auth().onAuthStateChanged(function (user) {
 		favourites.href = '#';
 		favourites.onclick = function () {
 			if (confirm('Please sign in to view your favourites!')) {
-				window.location.href = '/signin.html';
+				window.location.href = '/html/signin.html';
 			}
 		};
 		element.innerHTML = 'Sign In';
 		element.onclick = function () {
-			window.location.href = '/signin.html';
+			window.location.href = '/html/signin.html';
 		};
 	}
 });

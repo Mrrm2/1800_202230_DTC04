@@ -4,12 +4,12 @@ function checkSignIn() {
 		if (user) {
 			user_ID = user.uid;
 			// redirect to community page if signed in
-			window.location.href = '/community.html';
+			window.location.href = '/html/community.html';
 		} else {
 			if (confirm('Please sign in to access this feature!')) {
-				window.location.href = '/signin.html';
+				window.location.href = '/html/signin.html';
 			} else {
-				window.location.href = '/home.html';
+				window.location.href = '/html/home.html';
 			}
 		}
 	});
@@ -21,12 +21,12 @@ function check_SignIn() {
 		if (user) {
 			user_ID = user.uid;
 			// redirect to community page if signed in
-			window.location.href = '/userProfile.html';
+			window.location.href = '/html/userProfile.html';
 		} else {
 			if (confirm('Please sign in to access this feature!')) {
-				window.location.href = '/signin.html';
+				window.location.href = '/html/signin.html';
 			} else {
-				window.location.href = '/home.html';
+				window.location.href = '/html/home.html';
 			}
 		}
 	});

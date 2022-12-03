@@ -168,7 +168,7 @@ favourite = function () {
 				});
 		} else {
 			if (confirm('Please sign in to add to your favourites!')) {
-				window.location.href = '/signin.html';
+				window.location.href = '/html/signin.html';
 			}
 		}
 	});
@@ -183,7 +183,7 @@ skip = function () {
 				'No more activities matching your filters. Please update your filters.'
 			)
 		) {
-			window.location.href = '/home.html';
+			window.location.href = '/html/home.html';
 		}
 	} else {
 		currActivity = selectRandomActivityFromList(listOfActivities);
