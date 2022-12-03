@@ -28,6 +28,7 @@ Content of the project folder:
 
 ```
 Top level of project folder:
+├── .firebaserc
 ├── .gitignore
 ├── 404.html
 ├── firebase.json
@@ -102,7 +103,7 @@ Firebase hosting files:
 │       hosting..cache
 ├── firebase.json
 ├── firestore.indexes.json
-├── firestore.rules
+└── firestore.rules
 
 ```
 
