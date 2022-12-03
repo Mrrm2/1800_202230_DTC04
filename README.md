@@ -100,6 +100,9 @@ Firebase hosting files:
 ├── .firebaserc
 ├───.firebase
 │       hosting..cache
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
 
 ```
 
